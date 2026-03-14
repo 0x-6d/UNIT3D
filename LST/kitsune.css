@@ -1,0 +1,512 @@
+/*
+ * Kitsune Theme Override
+ * OLED Black + Kitsune Pink Accent
+ *
+ * Load this stylesheet AFTER the default theme CSS.
+ * It overrides CSS custom properties with the Kitsune palette.
+ *
+ * Palette reference:
+ *   Base:      #0d0d0d    Mantle:    #0a0a0a    Crust:     #000000
+ *   Surface0:  #121212    Surface1:  #1a1a1a    Surface2:  #222222
+ *   Overlay0:  #444444    Overlay1:  #666666    Overlay2:  #888888
+ *   Subtext0:  #999999    Subtext1:  #bbbbbb    Text:      #e6e6e6
+ *   Pink:      #F4AACA    PinkSoft:  rgba(244,170,202,0.6)
+ *   PinkDim:   rgba(244,170,202,0.35)
+ *   Red:       #e06c75    Maroon:    #d4727a
+ *   Peach:     #e8a87c    Yellow:    #e5c07b    Green:     #98c379
+ *   Teal:      #7ec8b5    Sky:       #7ec8c8    Sapphire:  #61afef
+ *   Blue:      #61afef    Lavender:  #c3a6d9    Mauve:     #c678dd
+ */
+
+:root {
+  /* ── Core text ─────────────────────────────────────────── */
+  --text-color: #e6e6e6;              /* Text */
+  --text-primary: #e6e6e6;
+
+  /* ── Accent palette ────────────────────────────────────── */
+  --color-dark-magenta: #1a1a1a;      /* Surface1 */
+  --color-dark-green: #121212;        /* Surface0 */
+  --color-dark-blue: #121212;
+  --color-dark-red: #1a1a1a;
+
+  --color-red: #e06c75;
+  --color-light-red: #e06c75;
+  --color-green: #98c379;
+  --color-light-green: #98c379;
+  --color-yellow: #e5c07b;
+  --color-light-yellow: #e5c07b;
+  --color-magenta: #F4AACA;           /* Kitsune Pink */
+  --color-light-magenta: #F4AACA;
+  --color-dark-purple: #1a1a1a;
+  --color-purple: #c678dd;
+  --color-light-purple: #c678dd;
+  --color-blue: #61afef;
+  --color-light-blue: #c3a6d9;        /* Lavender */
+  --color-bright-white: #e6e6e6;      /* Text (not pure white) */
+  --color-light-orange: #e8a87c;
+
+  /* ── Body ──────────────────────────────────────────────── */
+  --body-bg: #000000;                 /* Crust – true OLED black */
+  --body-fg: #e6e6e6;
+
+  /* ── UI accent / status ────────────────────────────────── */
+  --ui-accent-fg: #F4AACA;            /* Kitsune Pink */
+  --ui-success-fg: #98c379;
+  --ui-success-fg-strong: #98c379;
+  --ui-info-fg: #F4AACA;
+  --ui-info-fg-weak: #61afef;
+  --ui-warning-fg: #e5c07b;
+  --ui-warning-fg-strong: #e8a87c;
+  --ui-danger-fg: #e06c75;
+  --ui-danger-fg-weak: #d4727a;
+
+  /* ── Scrollbar ─────────────────────────────────────────── */
+  --scrollbar-color: rgba(244, 170, 202, 0.25);
+
+  /* ── Message bubbles ───────────────────────────────────── */
+  --message-bubble-bg: #121212;       /* Surface0 */
+  --message-bubble-fg: currentColor;
+  --message-bubble-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+
+  /* ── Panels ────────────────────────────────────────────── */
+  --panel-bg: #0d0d0d;               /* Base */
+  --panel-fg: #e6e6e6;
+  --panel-head-bg: #0a0a0a;          /* Mantle */
+  --panel-head-fg: #e6e6e6;
+  --panel-action-fg: #bbbbbb;         /* Subtext1 */
+  --panel-border: none;
+  --panel-box-shadow: none;
+  --panel-bg-secondary: #0a0a0a;
+
+  /* ── Dialogs ───────────────────────────────────────────── */
+  --dialog-bg: #0d0d0d;
+  --dialog-fg: #e6e6e6;
+  --dialog-head-bg: #0a0a0a;
+  --dialog-head-fg: #e6e6e6;
+  --dialog-border: 1px solid #1a1a1a;
+  --dialog-border-radius: 10px;
+
+  /* ── Top nav ───────────────────────────────────────────── */
+  --top-nav-bg: #000000;              /* Crust */
+  --top-nav-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  --top-nav-dropdown-fg: #bbbbbb;
+  --top-nav-dropdown-hover-fg: #e6e6e6;
+  --top-nav-dropdown-hover-bg: #121212;
+  --top-nav-dropdown-menu-bg: #0d0d0d;
+  --top-nav-dropdown-menu-border: 1px solid #1a1a1a;
+  --top-nav-dropdown-menu-border-radius: 8px;
+  --top-nav-dropdown-menu-box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+  --top-nav-dropdown-menu-item-fg: #bbbbbb;
+  --top-nav-dropdown-menu-item-bg: transparent;
+  --top-nav-dropdown-menu-item-hover-fg: #e6e6e6;
+  --top-nav-dropdown-menu-item-hover-bg: #121212;
+  --top-nav-dropdown-menu-item-icon-fg: #e6e6e6;
+  --top-nav-dropdown-menu-item-icon-bg: #1a1a1a;
+  --top-nav-ratio-bar-fg: #e6e6e6;
+  --top-nav-icon-bar-icon-bg: #121212;
+  --top-nav-icon-bar-icon-fg: #bbbbbb;
+  --top-nav-icon-bar-icon-hover-bg: #1a1a1a;
+  --top-nav-icon-bar-icon-hover-fg: #e6e6e6;
+  --top-nav-stats-fg: #999999;        /* Subtext0 */
+  --top-nav-toggle-fg: #999999;
+
+  /* ── Secondary nav ─────────────────────────────────────── */
+  --secondary-nav-bg: #0a0a0a;
+  --secondary-nav-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  --secondary-nav-tab-fg: #999999;
+  --secondary-nav-tab-bg: inherit;
+  --secondary-nav-tab-active-text-decoration: underline #F4AACA 2px;
+  --secondary-nav-tab-hover-fg: #e6e6e6;
+  --secondary-nav-tab-hover-text-decoration: underline #F4AACA 2px;
+  --secondary-nav-tab-menu-bg: #121212;
+  --secondary-nav-tab-menu-border: 1px solid #1a1a1a;
+  --secondary-nav-tab-menu-border-radius: 8px;
+  --secondary-nav-tab-menu-box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+
+  /* ── Breadcrumbs ───────────────────────────────────────── */
+  --breadcrumb-fg: #444444;           /* Overlay0 */
+  --breadcrumb-active-fg: #F4AACA;    /* Kitsune Pink */
+  --breadcrumb-hover-fg: #e6e6e6;
+
+  /* ── Buttons ───────────────────────────────────────────── */
+  --button-filled-bg: #F4AACA;        /* Kitsune Pink */
+  --button-filled-fg: #000000;        /* Black on pink */
+  --button-filled-border: none;
+  --button-outlined-bg: transparent;
+  --button-outlined-border: 1px solid #222222; /* Surface2 */
+  --button-outlined-fg: #e6e6e6;
+  --button-text-fg: #e6e6e6;
+
+  --icon-button-filled-bg: #F4AACA;
+  --icon-button-filled-fg: #000000;
+  --icon-button-fg: currentColor;
+
+  /* ── Inputs / textareas / selects ──────────────────────── */
+  --input-text-border: 1px solid #222222;
+  --input-text-border-active: 2px solid #F4AACA;
+  --input-text-border-hover: 2px solid #666666;
+  --input-text-border-error: 1px solid #e06c75;
+  --input-text-fg: #e6e6e6;
+
+  --textarea-border: 1px solid #222222;
+  --textarea-border-active: 2px solid #F4AACA;
+  --textarea-border-hover: 2px solid #666666;
+  --textarea-border-error: 1px solid #e06c75;
+  --textarea-fg: #e6e6e6;
+
+  --select-border: 1px solid #222222;
+  --select-border-active: 2px solid #F4AACA;
+  --select-border-hover: 2px solid #666666;
+  --select-border-error: 1px solid #e06c75;
+  --select-fg: #e6e6e6;
+  --select-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='%23e6e6e6' d='M6 8l-1 1l5 5l5-5l-1-1l-4 4l-4-4z'/></svg>");
+
+  --fieldset-fg: #bbbbbb;
+  --fieldset-border: 1px solid #222222;
+
+  --label-bg: #1a1a1a;
+  --label-fg: #999999;
+  --label-fg-active: #F4AACA;
+  --label-fg-error: #e06c75;
+  --label-fg-hover: #666666;
+  --legend-fg: #999999;
+
+  /* ── Data tables ───────────────────────────────────────── */
+  --data-table-fg: #e6e6e6;
+  --data-table-th-bg: #0a0a0a;
+  --data-table-tr-border: 1px solid #121212;
+  --data-table-tr-even-bg: #0d0d0d;
+  --data-table-tr-odd-bg: rgba(18, 18, 18, 0.5);
+  --data-table-tr-hover-bg: rgba(244, 170, 202, 0.08);
+
+  /* ── Key-value ─────────────────────────────────────────── */
+  --key-value-fg: #e6e6e6;
+  --key-value-even-bg: #0d0d0d;
+  --key-value-odd-bg: rgba(18, 18, 18, 0.5);
+
+  /* ── Alerts ────────────────────────────────────────────── */
+  --alert-bg: #0a0a0a;
+  --alert-fg: #999999;
+  --alert-gap-color: #1a1a1a;
+
+  /* ── Achievements ──────────────────────────────────────── */
+  --achievement-bg: #0d0d0d;
+  --achievement-fg: #e6e6e6;
+  --achievement-progress-bg: #F4AACA;  /* Kitsune Pink */
+
+  /* ── Articles ──────────────────────────────────────────── */
+  --article-card-bg: #0a0a0a;
+  --article-card-fg: #bbbbbb;
+  --article-card-head-fg: #e6e6e6;
+  --article-card-time-fg: #999999;
+  --article-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+
+  /* ── BBCode ────────────────────────────────────────────── */
+  --bbcode-input-header-bg: #0a0a0a;
+  --bbcode-input-body-bg: #0a0a0a;
+  --bbcode-input-border: 1px solid #1a1a1a;
+  --bbcode-rendered-fg-default: #e6e6e6;
+  --bbcode-rendered-fg-muted: #999999;
+  --bbcode-rendered-fg-subtle: #222222;
+  --bbcode-rendered-canvas-default: transparent;
+  --bbcode-rendered-canvas-subtle: #121212;
+  --bbcode-rendered-border-default: #1a1a1a;
+  --bbcode-rendered-border-muted: #222222;
+  --bbcode-rendered-neutral-muted: rgba(26, 26, 26, 0.5);
+  --bbcode-rendered-accent-fg: #F4AACA;
+  --bbcode-rendered-accent-emphasis: #F4AACA;
+  --bbcode-rendered-attention-subtle: #c678dd;
+  --bbcode-rendered-danger-fg: #e06c75;
+  --bbcode-rendered-quote-bg: rgba(26, 26, 26, 0.4);
+  --bbcode-rendered-quote-border: #F4AACA;
+
+  /* ── Chatbox ───────────────────────────────────────────── */
+  --chatbox-message-bg: #121212;
+  --chatbox-button-fg: #444444;
+  --chatbox-button-hover-fg: #888888;
+  --chatbox-users-bg: #0a0a0a;
+  --chatbox-tab-delete-fg: #e06c75;
+  --chatbox-tab-delete-bg: #1a1a1a;
+
+  /* ── Collectible cards ─────────────────────────────────── */
+  --collectible-card-bg: #0a0a0a;
+  --collectible-card-fg: #bbbbbb;
+  --collectible-card-hover-fg: #e6e6e6;
+
+  /* ── Compact search ────────────────────────────────────── */
+  --compact-search-bg: #121212;
+  --compact-search-fg: #e6e6e6;
+
+  /* ── Donation ──────────────────────────────────────────── */
+  --donation-border-color: #1a1a1a;
+  --donation-box-shadow-color: rgba(0, 0, 0, 0.5);
+  --donation-primary-text-color: #e6e6e6;
+  --donation-secondary-text-color: #999999;
+  --donation-background-color: #0a0a0a;
+  --donation-price-days-color: #e8a87c;
+  --donation-chart-daily-bg: rgba(244, 170, 202, 0.2);
+  --donation-chart-daily-border: #F4AACA;
+  --donation-chart-monthly-bg: rgba(198, 120, 221, 0.2);
+  --donation-chart-monthly-border: #c678dd;
+
+  /* ── Footer ────────────────────────────────────────────── */
+  --footer-bg: #000000;              /* Crust */
+  --footer-hr-fg: #121212;
+
+  /* ── Media hub ─────────────────────────────────────────── */
+  --mediahub-card-bg: #0a0a0a;
+  --mediahub-card-fg: #bbbbbb;
+  --mediahub-card-hover-fg: #e6e6e6;
+
+  /* ── Meta (backdrop, dropdowns, chips) ─────────────────── */
+  --meta-backdrop-filter: brightness(15%) blur(100px);
+  --meta-dropdown-bg: rgba(18, 18, 18, 0.6);
+  --meta-dropdown-hover-bg: rgba(26, 26, 26, 0.5);
+  --meta-dropdown-fg: #bbbbbb;
+  --meta-dropdown-hover-fg: #e6e6e6;
+  --meta-description-fg: #e6e6e6;
+  --meta-id-tag-fg: #e6e6e6;
+  --meta-id-tag-hover-fg: #e6e6e6;
+  --meta-id-tag-hover-bg: rgba(26, 26, 26, 0.5);
+  --meta-chips-heading-fg: #bbbbbb;
+  --meta-chip-icon-fg: #000000;
+  --meta-chip-icon-bg: #999999;
+  --meta-chip-icon-hover-bg: #bbbbbb;
+  --meta-chip-name-fg: #e6e6e6;
+  --meta-chip-value-fg: #999999;
+  --meta-chip-value-hover-fg: #e6e6e6;
+  --meta-chip-hover-bg: rgba(26, 26, 26, 0.5);
+  --meta-popup-bg: #0a0a0a;
+  --meta-popup-fg: #666666;
+
+  /* ── Meter ─────────────────────────────────────────────── */
+  --meter-fg: #121212;
+  --meter-bg: #222222;
+
+  /* ── Notifications ─────────────────────────────────────── */
+  --notification-read: transparent;
+  --notification-unread: #F4AACA;
+
+  /* ── Option / Pagination ───────────────────────────────── */
+  --option-bg: #121212;
+  --option-fg: #999999;
+
+  --paginate-bg: #0a0a0a;
+  --paginate-bg-hover: #121212;
+  --paginate-bg-current: #121212;
+  --paginate-fg: #999999;
+  --paginate-fg-disabled: #222222;
+  --paginate-divider: #1a1a1a;
+
+  /* ── Playlists ─────────────────────────────────────────── */
+  --playlist-card-bg: #0a0a0a;
+  --playlist-card-fg: #bbbbbb;
+  --playlist-card-border: 1px solid #121212;
+  --playlist-card-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  --playlist-card-missing-image-bg: #121212;
+  --playlist-card-missing-image-fg: #999999;
+
+  /* ── Prizes ────────────────────────────────────────────── */
+  --prize-bg: #0a0a0a;
+  --prize-fg: #bbbbbb;
+  --prize-heading-fg: #e6e6e6;
+  --prize-border: 1px solid #121212;
+  --prize-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  --prize-icon-primary-color: #98c379;
+  --prize-icon-secondary-color: #F4AACA;
+
+  /* ── Posts ──────────────────────────────────────────────── */
+  --post-bg: #0d0d0d;
+  --post-fg: #e6e6e6;
+  --post-head-fg: #e6e6e6;
+  --post-toolbar-bg: #0a0a0a;
+  --post-toolbar-fg: #bbbbbb;
+  --post-toolbar-hover-bg: #121212;
+  --post-like-fg: #98c379;
+  --post-dislike-fg: #e06c75;
+  --post-aside-bg: #121212;
+  --post-aside-fg: #e6e6e6;
+  --post-footer-fg: #e6e6e6;
+
+  /* ── Quick search ──────────────────────────────────────── */
+  --quick-search-bg: #121212;
+  --quick-search-fg: #bbbbbb;
+  --quick-search-border: 1px solid #1a1a1a;
+  --quick-search-border-radius: 16px;
+  --quick-search-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  --quick-search-selector-fg: #999999;
+  --quick-search-selector-hover-bg: #1a1a1a;
+  --quick-search-selector-hover-fg: #e6e6e6;
+  --quick-search-selector-selected-bg: #1a1a1a;
+  --quick-search-selector-selected-fg: #e6e6e6;
+  --quick-search-result-bg: #121212;
+  --quick-search-result-fg: #bbbbbb;
+  --quick-search-result-hover-bg: #1a1a1a;
+  --quick-search-result-hover-fg: #e6e6e6;
+  --quick-search-result-year-fg: #666666;
+
+  /* ── Subforum listing ──────────────────────────────────── */
+  --subforum-listing-odd-bg: rgba(18, 18, 18, 0.3);
+  --subforum-listing-even-bg: transparent;
+
+  /* ── Torrent cards ─────────────────────────────────────── */
+  --torrent-card-bg: #0d0d0d;
+  --torrent-card-fg: #e6e6e6;
+  --torrent-card-head-bg: #0a0a0a;
+  --torrent-card-head-fg: #e6e6e6;
+  --torrent-card-link-fg: #e6e6e6;
+  --torrent-card-genre-fg: #e6e6e6;
+
+  /* ── Torrent groups ────────────────────────────────────── */
+  --torrent-group-bg: #0a0a0a;
+  --torrent-group-header-bg: #121212;
+  --torrent-group-text: #e6e6e6;
+  --torrent-group-text-muted: #666666;
+  --torrent-group-table-stripe-even: rgba(230, 230, 230, 0.02);
+  --torrent-group-table-stripe-odd: rgba(230, 230, 230, 0.05);
+  --torrent-group-chip-border: rgba(230, 230, 230, 0.05);
+
+  /* ── Torrent rows ──────────────────────────────────────── */
+  --torrent-row-fg: #bbbbbb;
+  --torrent-row-visited-fg: #c678dd;
+  --torrent-row-sticky-bg: #1a1a1a;
+  --torrent-row-format-fg: #bbbbbb;
+  --torrent-row-format-bg: #121212;
+  --torrent-row-seeders-fg: #98c379;
+  --torrent-row-leechers-fg: #e06c75;
+  --torrent-row-completed-fg: #F4AACA;  /* Kitsune Pink */
+  --torrent-row-comments-fg: #98c379;
+  --torrent-row-internal-fg: #e5c07b;
+  --torrent-row-personal-fg: #c678dd;
+  --torrent-row-featured-fg: rgba(244, 170, 202, 0.6);
+  --torrent-row-freeleech-fg: #F4AACA;
+  --torrent-row-double-upload-fg: rgba(244, 170, 202, 0.6);
+  --torrent-row-sticky-fg: #bbbbbb;
+  --torrent-row-highspeed-fg: #d4727a;
+  --torrent-row-bumped-fg: #e8a87c;
+
+  /* ── Torrent tags ──────────────────────────────────────── */
+  --torrent-tag-fg: #e6e6e6;
+  --torrent-tag-bg: transparent;
+  --torrent-tag-hover-fg: #e6e6e6;
+  --torrent-tag-hover-bg: rgba(244, 170, 202, 0.12);
+
+  /* ── User stat cards ───────────────────────────────────── */
+  --user-stat-card-bg: #0a0a0a;
+  --user-stat-card-fg: #bbbbbb;
+
+  /* ── Betting ───────────────────────────────────────────── */
+  --bet-foreground: #bbbbbb;
+  --bet-foreground-alt: #e6e6e6;
+  --bet-bg: #0a0a0a;
+  --bet-bg-alt: #0d0d0d;
+  --bet-bg-item: #121212;
+  --bet-bg-active: #1a1a1a;
+  --bet-muted: #666666;
+  --bet-muted-weak: #888888;
+  --bet-link-hover: #F4AACA;
+  --bet-coin-accent: #e5c07b;
+  --bet-active-tab-fg: #e6e6e6;
+  --bet-border: 1px solid rgba(230, 230, 230, 0.06);
+  --bet-overlay-01: rgba(230, 230, 230, 0.01);
+  --bet-overlay-02: rgba(230, 230, 230, 0.02);
+  --bet-overlay-03: rgba(230, 230, 230, 0.03);
+  --bet-primary: #F4AACA;             /* Kitsune Pink */
+  --bet-success: #98c379;
+  --bet-warning: #e5c07b;
+  --bet-danger: #e06c75;
+}
+
+/* ── Links ─────────────────────────────────────────────────── */
+a {
+  color: #F4AACA; /* Kitsune Pink */
+}
+a:hover {
+  color: rgba(244, 170, 202, 0.6); /* Pink Soft */
+}
+
+/* ── Utility text classes ──────────────────────────────────── */
+.text-bright {
+  color: #e6e6e6;
+}
+a.text-bright:focus,
+a.text-bright:hover {
+  color: #e6e6e6;
+}
+.text-blue {
+  color: #61afef;
+}
+.text-purple {
+  color: #c678dd;
+}
+.text-green {
+  color: #98c379;
+}
+.text-muted {
+  color: #666666;  /* Overlay1 */
+}
+.text-red {
+  color: #e06c75;
+}
+.text-orange {
+  color: #e8a87c;
+}
+.text-pink {
+  color: #F4AACA;
+}
+.text-danger {
+  color: #e06c75;
+}
+
+/* ── Badges ────────────────────────────────────────────────── */
+.badge-user {
+  background-color: #121212;
+  text-shadow: 1px 1px #000000;
+}
+
+/* ── Footer icon ───────────────────────────────────────────── */
+.footer__icon {
+  color: #F4AACA; /* Kitsune Pink */
+}
+
+/* ── Chatbox frame overrides ───────────────────────────────── */
+#frame {
+  background: #0d0d0d;
+}
+#frame .content .messages ul li {
+  border-bottom: 1px dashed #1a1a1a;
+}
+.chatbox .typing {
+  color: #e6e6e6;
+}
+#frame .content .messages ul li.sent h4 .text-muted {
+  color: #666666;
+}
+#frame .content .messages ul li > img {
+  border: 3px solid #F4AACA;
+}
+#frame .content .message-input .wrap input {
+  color: #e6e6e6;
+  background: #121212;
+}
+#frame .content .message-input .wrap .attachment {
+  color: #999999;
+}
+#frame .content .message-input .wrap button {
+  background: #1a1a1a;
+  color: #e6e6e6;
+}
+#frame .content .message-input .wrap button:hover {
+  background: #222222;
+}
+
+/* ── Sent message bubble overrides ─────────────────────────── */
+.sent > h4 {
+  background-color: #121212 !important;
+}
+.sent > div {
+  background-color: #121212 !important;
+}
+.sent > div:not(.system):before {
+  border-right-color: #121212 !important;
+}
