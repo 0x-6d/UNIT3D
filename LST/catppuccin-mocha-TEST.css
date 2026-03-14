@@ -472,6 +472,33 @@ a.text-bright:hover {
   padding: 4px 12px;                                     /* breathing room */
 }
 
+/* ── Top-nav dropdown (compact) ────────────────────────────── */
+.top-nav__dropdown > ul > li > a,
+.top-nav__dropdown > ul > li > form > button {
+  font-size: 15px;
+  padding: 6px 90px 6px 6px;
+  display: grid;
+  grid-template-columns: 30px auto;
+  column-gap: 10px;
+  align-items: center;
+  line-height: 15px;
+  border-radius: 5px;
+  white-space: nowrap;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  cursor: pointer;
+  color: var(--top-nav-dropdown-menu-item-fg);
+  background: var(--top-nav-dropdown-menu-item-bg);
+}
+
+.top-nav__dropdown > ul > li > a:hover,
+.top-nav__dropdown > ul > li > form > button:hover {
+  color: var(--top-nav-dropdown-menu-item-hover-fg);
+  background: var(--top-nav-dropdown-menu-item-hover-bg);
+}
+
 /* ── Footer icon ───────────────────────────────────────────── */
 .footer__icon {
   color: #cba6f7; /* Mauve */
