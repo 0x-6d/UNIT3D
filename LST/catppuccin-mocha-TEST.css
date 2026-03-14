@@ -760,3 +760,34 @@ a.text-bright:hover {
   background: #45475a !important;
   color: #cdd6f4 !important;
 }
+
+/* ── Torrent moderation action buttons (singular scope) ──── */
+.data-table__action .form__button--filled:has(.fa-question) {
+  background: #313244 !important;     /* Surface0 */
+  color: #cba6f7 !important;          /* Mauve */
+  border: 1px solid rgba(203, 166, 247, 0.3);
+}
+.data-table__action .form__button--filled:has(.fa-question):hover {
+  background: #45475a !important;
+  color: #cdd6f4 !important;
+}
+
+.data-table__action .form__button--filled:has(.fa-pencil) {
+  background: #313244 !important;     /* Surface0 */
+  color: #bac2de !important;          /* Subtext1 */
+  border: 1px solid rgba(186, 194, 222, 0.3);
+}
+.data-table__action .form__button--filled:has(.fa-pencil):hover {
+  background: #45475a !important;
+  color: #cdd6f4 !important;
+}
+
+.data-table__action .form__button--filled:has(.fa-trash-alt) {
+  background: #313244 !important;     /* Surface0 */
+  color: #f38ba8 !important;          /* Red */
+  border: 1px solid rgba(243, 139, 168, 0.3);
+}
+.data-table__action .form__button--filled:has(.fa-trash-alt):hover {
+  background: #45475a !important;
+  color: #cdd6f4 !important;
+}
