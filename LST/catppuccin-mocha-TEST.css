@@ -791,3 +791,31 @@ a.text-bright:hover {
   background: #45475a !important;
   color: #cdd6f4 !important;
 }
+
+/* ── Wiki content subtle background lift ─────────────────── */
+.panel__body.bbcode-rendered {
+  background: #282839;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+/* ── Wiki sidebar buttons ────────────────────────────────── */
+.sidebar2 .form__button--filled:has(.fa-edit) {
+  background: #313244 !important;     /* Surface0 */
+  color: #bac2de !important;          /* Subtext1 */
+  border: 1px solid rgba(186, 194, 222, 0.3);
+}
+.sidebar2 .form__button--filled:has(.fa-edit):hover {
+  background: #45475a !important;
+  color: #cdd6f4 !important;
+}
+
+.sidebar2 .form__button--filled:has(.fa-trash) {
+  background: #313244 !important;     /* Surface0 */
+  color: #f38ba8 !important;          /* Red */
+  border: 1px solid rgba(243, 139, 168, 0.3);
+}
+.sidebar2 .form__button--filled:has(.fa-trash):hover {
+  background: #45475a !important;
+  color: #cdd6f4 !important;
+}
