@@ -73,7 +73,7 @@
   --panel-head-bg: #181825;           /* Mantle */
   --panel-head-fg: #cdd6f4;
   --panel-action-fg: #bac2de;         /* Subtext1 */
-  --panel-border: none;
+  --panel-border: 1px solid #313244;      /* Surface0 */
   --panel-box-shadow: none;
   --panel-bg-secondary: #181825;
 
