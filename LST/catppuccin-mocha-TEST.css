@@ -576,8 +576,15 @@ a.text-bright:hover {
 
 /* ── Torrent badges (Catppuccin Mocha) ────────────────────── */
 .torrent-badges__item {
-  background: #313244 !important; /* Surface0 — works on both normal and sticky rows */
-  border: 1px solid #45475a;      /* Surface1 */
+  background: #181825;            /* Mantle */
+  border: 1px solid #313244;      /* Surface0 */
+}
+
+/* Badges inside sticky rows need a lighter bg to not clash */
+.torrent-search--list__sticky-row .torrent-badges__item,
+[class*="sticky"] .torrent-badges__item {
+  background: #45475a !important; /* Surface1 */
+  border-color: #585b70;          /* Surface2 */
 }
 
 .torrent-badges__item--seeding {
