@@ -23,6 +23,8 @@
   --text-primary: #cdd6f4;
 
   /* ── Accent palette ────────────────────────────────────── */
+  /* NOTE: light/dark variants intentionally map to the same hex
+     when no Mocha equivalent exists — upstream consumes both vars. */
   --color-dark-magenta: #45475a;      /* Surface1 */
   --color-dark-green: #313244;        /* Surface0 */
   --color-dark-blue: #313244;
@@ -368,7 +370,7 @@
   /* ── Torrent rows ──────────────────────────────────────── */
   --torrent-row-fg: #bac2de;
   --torrent-row-visited-fg: #cba6f7;    /* Mauve */
-  --torrent-row-sticky-bg: #282839;  /* Subtle tint */
+  --torrent-row-sticky-bg: #282839;  /* Off-palette: Base/Surface0 midpoint */
   --torrent-row-format-fg: #bac2de;
   --torrent-row-format-bg: #313244;
   --torrent-row-seeders-fg: #a6e3a1;    /* Green */
@@ -684,21 +686,11 @@ a.text-bright:hover {
   transition: 0.2s;
 }
 
-.torrent-results__delete-btn:hover {
-  background: #45475a !important;     /* Surface1 */
-  color: #cdd6f4 !important;          /* Text */
-}
-
 /* ── Torrent section action buttons (match torrent tools) ── */
 .torrent-section__btn--danger {
   background: #313244 !important;     /* Surface0 */
   color: #f38ba8 !important;          /* Red */
   border: 1px solid rgba(243, 139, 168, 0.3);
-}
-
-.torrent-section__btn--danger:hover {
-  background: #45475a !important;     /* Surface1 */
-  color: #cdd6f4 !important;          /* Text */
 }
 
 .torrent-section__btn--warning {
@@ -707,16 +699,11 @@ a.text-bright:hover {
   border: 1px solid rgba(250, 179, 135, 0.3);
 }
 
-.torrent-section__btn--warning:hover {
-  background: #45475a !important;     /* Surface1 */
-  color: #cdd6f4 !important;          /* Text */
-}
-
 /* ── Seeding glow: calm the fuck down on torrent page meta bar ────── */
 .torrent-meta-bar__stat.torrent-activity-indicator--seeding {
   text-shadow:
     0 0 0   var(--torrent-row-seeders-fg),
-    0 0 4px var(--torrent-row-seeders-fg);
+    0 0 4px var(--torrent-row-seeders-fg),
     0 0 10px rgba(166, 227, 161, 0.3);
 }
 
@@ -726,19 +713,11 @@ a.text-bright:hover {
   color: #a6e3a1 !important;          /* Green */
   border: 1px solid rgba(166, 227, 161, 0.3);
 }
-.data-table__actions .form__button--filled:has(.fa-thumbs-up):hover {
-  background: #45475a !important;
-  color: #cdd6f4 !important;
-}
 
 .data-table__actions .form__button--filled:has(.fa-pause) {
   background: #313244 !important;     /* Surface0 */
   color: #fab387 !important;          /* Peach */
   border: 1px solid rgba(250, 179, 135, 0.3);
-}
-.data-table__actions .form__button--filled:has(.fa-pause):hover {
-  background: #45475a !important;
-  color: #cdd6f4 !important;
 }
 
 .data-table__actions .form__button--filled:has(.fa-thumbs-down) {
@@ -746,40 +725,19 @@ a.text-bright:hover {
   color: #f38ba8 !important;          /* Red */
   border: 1px solid rgba(243, 139, 168, 0.3);
 }
-.data-table__actions .form__button--filled:has(.fa-thumbs-down):hover {
-  background: #45475a !important;
-  color: #cdd6f4 !important;
-}
 
-.data-table__actions .form__button--filled:has(.fa-question) {
-  background: #313244 !important;     /* Surface0 */
-  color: #cba6f7 !important;          /* Mauve */
-  border: 1px solid rgba(203, 166, 247, 0.3);
-}
-.data-table__actions .form__button--filled:has(.fa-question):hover {
-  background: #45475a !important;
-  color: #cdd6f4 !important;
-}
-
-/* ── Torrent moderation action buttons (singular scope) ──── */
+.data-table__actions .form__button--filled:has(.fa-question),
 .data-table__action .form__button--filled:has(.fa-question) {
   background: #313244 !important;     /* Surface0 */
   color: #cba6f7 !important;          /* Mauve */
   border: 1px solid rgba(203, 166, 247, 0.3);
 }
-.data-table__action .form__button--filled:has(.fa-question):hover {
-  background: #45475a !important;
-  color: #cdd6f4 !important;
-}
 
+/* ── Torrent moderation action buttons (singular scope) ──── */
 .data-table__action .form__button--filled:has(.fa-pencil) {
   background: #313244 !important;     /* Surface0 */
   color: #bac2de !important;          /* Subtext1 */
   border: 1px solid rgba(186, 194, 222, 0.3);
-}
-.data-table__action .form__button--filled:has(.fa-pencil):hover {
-  background: #45475a !important;
-  color: #cdd6f4 !important;
 }
 
 .data-table__action .form__button--filled:has(.fa-trash-alt) {
@@ -787,14 +745,10 @@ a.text-bright:hover {
   color: #f38ba8 !important;          /* Red */
   border: 1px solid rgba(243, 139, 168, 0.3);
 }
-.data-table__action .form__button--filled:has(.fa-trash-alt):hover {
-  background: #45475a !important;
-  color: #cdd6f4 !important;
-}
 
 /* ── Wiki content subtle background lift ─────────────────── */
 .panel__body.bbcode-rendered {
-  background: #282839;
+  background: #282839;              /* Off-palette: Base/Surface0 midpoint */
   border-radius: 8px;
   padding: 20px;
 }
@@ -805,19 +759,22 @@ a.text-bright:hover {
   color: #bac2de !important;          /* Subtext1 */
   border: 1px solid rgba(186, 194, 222, 0.3);
 }
-.sidebar2 .form__button--filled:has(.fa-edit):hover {
-  background: #45475a !important;
-  color: #cdd6f4 !important;
-}
 
 .sidebar2 .form__button--filled:has(.fa-trash) {
   background: #313244 !important;     /* Surface0 */
   color: #f38ba8 !important;          /* Red */
   border: 1px solid rgba(243, 139, 168, 0.3);
 }
-.sidebar2 .form__button--filled:has(.fa-trash):hover {
-  background: #45475a !important;
-  color: #cdd6f4 !important;
+
+/* ── Shared action-button hover: Surface1 bg + Text fg ──── */
+.torrent-results__delete-btn:hover,
+.torrent-section__btn--danger:hover,
+.torrent-section__btn--warning:hover,
+.data-table__actions .form__button--filled:hover,
+.data-table__action .form__button--filled:hover,
+.sidebar2 .form__button--filled:hover {
+  background: #45475a !important;     /* Surface1 */
+  color: #cdd6f4 !important;          /* Text */
 }
 
 /* ── Naming validation popover (Catppuccin Mocha) ────────── */
@@ -851,10 +808,7 @@ a.text-bright:hover {
   border-bottom: 1px solid #313244;
 }
 
-.naming-validation__issue-content {
-  color: #bac2de !important;
-}
-
+.naming-validation__issue-content,
 .naming-validation__issue-text {
   color: #bac2de !important;
 }
@@ -907,5 +861,4 @@ a.text-bright:hover {
 
 .naming-validation__perfect .text-success {
   color: #a6e3a1 !important;
-}
 }
