@@ -890,3 +890,20 @@ a.text-bright:hover {
   border: 1px solid #45475a !important;
   color: #cdd6f4 !important;
 }
+
+.naming-validation__issue-count {
+  color: #cdd6f4 !important;
+}
+
+.naming-validation__chevron {
+  color: #a6adc8 !important;
+}
+
+.naming-validation__perfect {
+  background: transparent !important;
+}
+
+.naming-validation__perfect .text-success {
+  color: #a6e3a1 !important;
+}
+}
