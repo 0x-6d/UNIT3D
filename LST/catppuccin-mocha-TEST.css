@@ -549,3 +549,86 @@ a.text-bright:hover {
 .sent > div:not(.system):before {
   border-right-color: #313244 !important;
 }
+
+/* ── Filled button color variants (Catppuccin Mocha) ──────── */
+/* Green: Download, Approve */
+.form__button--filled.text-green,
+.form__button--filled.text-success {
+  background: #a6e3a1;            /* Green */
+  color: #1e1e2e;                 /* Base */
+  border: none;
+}
+
+/* Red: Delete, Reject */
+.form__button--filled.text-red,
+.form__button--filled.text-danger {
+  background: #f38ba8;            /* Red */
+  color: #1e1e2e;
+  border: none;
+}
+
+/* Orange/Yellow: Postpone */
+.form__button--filled.text-orange,
+.form__button--filled.text-warning {
+  background: #fab387;            /* Peach */
+  color: #1e1e2e;
+  border: none;
+}
+
+/* Pink: Thank, Feature */
+.form__button--filled.text-pink {
+  background: #f5c2e7;            /* Pink */
+  color: #1e1e2e;
+  border: none;
+}
+
+/* Purple: Revoke featured */
+.form__button--filled.text-purple {
+  background: #cba6f7;            /* Mauve */
+  color: #1e1e2e;
+  border: none;
+}
+
+/* Blue (default filled) */
+.form__button--filled.text-blue {
+  background: #89b4fa;            /* Blue */
+  color: #1e1e2e;
+  border: none;
+}
+
+/* ── Outlined button tinted borders ───────────────────────── */
+.form__button--outlined.text-green {
+  border-color: rgba(166, 227, 161, 0.4);
+}
+.form__button--outlined.text-red,
+.form__button--outlined.text-danger {
+  border-color: rgba(243, 139, 168, 0.4);
+}
+.form__button--outlined.text-orange {
+  border-color: rgba(250, 179, 135, 0.4);
+}
+.form__button--outlined.text-purple {
+  border-color: rgba(203, 166, 247, 0.4);
+}
+.form__button--outlined.text-pink {
+  border-color: rgba(245, 194, 231, 0.4);
+}
+.form__button--outlined.text-yellow {
+  border-color: rgba(249, 226, 175, 0.4);
+}
+.form__button--outlined.text-blue {
+  border-color: rgba(137, 180, 250, 0.4);
+}
+
+/* ── Torrent icon badges ──────────────────────────────────── */
+.torrent-icons .badge {
+  background: #181825;            /* Mantle */
+  border: 1px solid #313244;      /* Surface0 */
+  border-radius: 50%;
+}
+
+/* ── Thank/heart button ───────────────────────────────────── */
+.form__button--outlined.text-red .fa-heart,
+.form__button--outlined .fa-heart {
+  color: #f38ba8;                 /* Red */
+}
