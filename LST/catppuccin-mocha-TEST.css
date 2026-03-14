@@ -422,6 +422,7 @@
 body {
   background: #1e1e2e
     url('https://raw.githubusercontent.com/0x-6d/UNIT3D/e75f4ee7e4b3961915b82a78752cc7b84990fcd0/Assets/body_bg.svg');
+    background-size: 300px auto;
 }
 
 /* ── Links ─────────────────────────────────────────────────── */
