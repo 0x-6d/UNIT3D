@@ -819,3 +819,68 @@ a.text-bright:hover {
   background: #45475a !important;
   color: #cdd6f4 !important;
 }
+
+/* ── Naming validation popover (Catppuccin Mocha) ────────── */
+.naming-validation__issues-panel {
+  background: #181825 !important;     /* Mantle */
+  border: 1px solid #45475a;          /* Surface1 */
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(17, 17, 27, 0.6);
+  color: #cdd6f4;                     /* Text */
+}
+
+.naming-validation__issues-header {
+  border-bottom: 1px solid #313244;   /* Surface0 */
+  color: #cdd6f4;
+}
+
+.naming-validation__issues-header h4 {
+  color: #cdd6f4;
+}
+
+.naming-validation__close-btn {
+  color: #a6adc8 !important;          /* Subtext0 */
+}
+.naming-validation__close-btn:hover {
+  color: #cdd6f4 !important;
+}
+
+.naming-validation__issue-item {
+  border-bottom: 1px solid #313244;   /* Surface0 */
+}
+
+.naming-validation__issue-text {
+  color: #bac2de;                     /* Subtext1 */
+}
+
+.naming-validation__issue-icon {
+  color: #a6adc8;                     /* Subtext0 */
+}
+
+.naming-validation__issue--format .naming-validation__issue-icon {
+  color: #89b4fa;                     /* Blue */
+}
+
+.naming-validation__issue--naming .naming-validation__issue-icon {
+  color: #f9e2af;                     /* Yellow */
+}
+
+.naming-validation__issue--content .naming-validation__issue-icon {
+  color: #fab387;                     /* Peach */
+}
+
+.naming-validation__issue-suggestion {
+  background: #313244;                /* Surface0 */
+  color: #a6e3a1;                     /* Green */
+  border-radius: 4px;
+}
+
+.naming-validation__warning-icon {
+  color: #f9e2af;                     /* Yellow */
+}
+
+.naming-validation__issues-summary {
+  background: #313244 !important;     /* Surface0 */
+  border: 1px solid #45475a;          /* Surface1 */
+  color: #cdd6f4;
+}
