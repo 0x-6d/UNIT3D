@@ -677,4 +677,5 @@ a.text-bright:hover {
   text-shadow:
     0 0 0   var(--torrent-row-seeders-fg),
     0 0 4px var(--torrent-row-seeders-fg);
+    0 0 10px rgba(166, 227, 161, 0.3);
 }
