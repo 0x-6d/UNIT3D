@@ -672,7 +672,23 @@ a.text-bright:hover {
   border: 1px solid rgba(137, 180, 250, 0.3);
 }
 
-/* ── Seeding glow: calm down on torrent page meta bar ────── */
+/* ── Search page delete button (match torrent tools) ─────── */
+.torrent-results__delete-btn {
+  background: #313244 !important;     /* Surface0 */
+  color: #f38ba8 !important;          /* Red */
+  border: 1px solid rgba(243, 139, 168, 0.3);
+  border-radius: 5px;
+  padding: 4px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.torrent-results__delete-btn:hover {
+  background: #45475a !important;     /* Surface1 */
+  color: #cdd6f4 !important;          /* Text */
+}
+/* ── Seeding glow: calm the fuck down on torrent page meta bar ────── */
 .torrent-meta-bar__stat.torrent-activity-indicator--seeding {
   text-shadow:
     0 0 0   var(--torrent-row-seeders-fg),
