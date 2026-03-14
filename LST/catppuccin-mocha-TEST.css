@@ -368,7 +368,7 @@
   /* ── Torrent rows ──────────────────────────────────────── */
   --torrent-row-fg: #bac2de;
   --torrent-row-visited-fg: #cba6f7;    /* Mauve */
-  --torrent-row-sticky-bg: #45475a;
+  --torrent-row-sticky-bg: #282839;  /* Subtle tint */
   --torrent-row-format-fg: #bac2de;
   --torrent-row-format-bg: #313244;
   --torrent-row-seeders-fg: #a6e3a1;    /* Green */
@@ -583,8 +583,8 @@ a.text-bright:hover {
 /* Badges inside sticky rows need a lighter bg to not clash */
 .torrent-search--list__sticky-row .torrent-badges__item,
 [class*="sticky"] .torrent-badges__item {
-  background: #45475a !important; /* Surface1 */
-  border-color: #585b70;          /* Surface2 */
+  background: #313244 !important; /* Surface0 */
+  border-color: #45475a;          /* Surface1 */
 }
 
 .torrent-badges__item--seeding {
