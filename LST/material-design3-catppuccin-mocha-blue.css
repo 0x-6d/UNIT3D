@@ -1,0 +1,674 @@
+/*
+ * Catppuccin Mocha — Blue Accent
+ * Overlay for Material Design Navy base theme
+ *
+ * Palette Reference:
+ *   Rosewater #f5e0dc | Flamingo #f2cdcd | Pink #f5c2e7 | Mauve #cba6f7
+ *   Red #f38ba8 | Maroon #eba0ac | Peach #fab387 | Yellow #f9e2af
+ *   Green #a6e3a1 | Teal #94e2d5 | Sky #89dceb | Sapphire #74c7ec
+ *   Blue #89b4fa | Lavender #b4befe
+ *   Text #cdd6f4 | Subtext1 #bac2de | Subtext0 #a6adc8
+ *   Overlay2 #9399b2 | Overlay1 #7f849c | Overlay0 #6c7086
+ *   Surface2 #585b70 | Surface1 #45475a | Surface0 #313244
+ *   Base #1e1e2e | Mantle #181825 | Crust #11111b
+ */
+
+:root {
+    /* ── Message Bubbles ── */
+    --message-bubble-bg: #313244;
+    --message-bubble-fg: #cdd6f4;
+
+    /* ── Achievements ── */
+    --achievement-fg: inherit;
+    --achievement-bg: #313244;
+    --achievement-box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12), 0 3px 3px -2px rgba(0, 0, 0, .4);
+    --achievement-progress-bg: #45475a;
+
+    /* ── Alerts ── */
+    --alert-bg: #313244;
+    --alert-fg: #a6adc8;
+    --alert-gap-color: #45475a;
+    --alert-gap-width: 1px;
+
+    /* ── Article Cards ── */
+    --article-card-bg: #313244;
+    --article-card-fg: #cdd6f4;
+    --article-card-head-fg: #bac2de;
+    --article-card-time-fg: #a6adc8;
+    --article-box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12), 0 3px 3px -2px rgba(0, 0, 0, .4);
+
+    /* ── BBCode Input ── */
+    --bbcode-input-header-bg: #45475a;
+    --bbcode-input-body-bg: #181825;
+    --bbcode-input-border: 1px solid #585b70;
+    --bbcode-input-border-radius: 22px;
+    --bbcode-input-bg: #181825;
+
+    /* ── BBCode Rendered ── */
+    --bbcode-rendered-fg-default: #cdd6f4;
+    --bbcode-rendered-fg-muted: #7f849c;
+    --bbcode-rendered-fg-subtle: #585b70;
+    --bbcode-rendered-canvas-default: transparent;
+    --bbcode-rendered-canvas-subtle: #313244;
+    --bbcode-rendered-border-default: #45475a;
+    --bbcode-rendered-border-muted: #585b70;
+    --bbcode-rendered-neutral-muted: #181825;
+    --bbcode-rendered-accent-fg: #89b4fa;
+    --bbcode-rendered-accent-emphasis: #89b4fa;
+    --bbcode-rendered-attention-subtle: #b4befe;
+    --bbcode-rendered-danger-fg: #f38ba8;
+    --bbcode-rendered-quote-bg: #181825;
+    --bbcode-rendered-quote-border: #89b4fa;
+
+    /* ── Body ── */
+    --body-bg: #1e1e2e;
+    --body-fg: #cdd6f4;
+    --text-primary: var(--body-fg);
+    --panel-bg-secondary: var(--dialog-head-bg, var(--panel-bg));
+
+    /* ── UI Semantic Colors ── */
+    --ui-accent-fg: #89b4fa;
+    --ui-success-fg: #a6e3a1;
+    --ui-success-fg-strong: #a6e3a1;
+    --ui-info-fg: #89b4fa;
+    --ui-info-fg-weak: #89b4fa;
+    --ui-warning-fg: #f9e2af;
+    --ui-warning-fg-strong: #fab387;
+    --ui-danger-fg: #f38ba8;
+    --ui-danger-fg-weak: #eba0ac;
+
+    /* ── Breadcrumbs ── */
+    --breadcrumb-fg: #89b4fa;
+    --breadcrumb-active-fg: #89b4fa;
+    --breadcrumb-hover-fg: #b4befe;
+    --breadcrumb-inactive-text-decoration: none;
+
+    /* ── Buttons: Filled ── */
+    --button-filled-bg: #313244;
+    --button-filled-border: none;
+    --button-filled-border-radius: 6px;
+    --button-filled-fg: #cdd6f4;
+
+    /* ── Buttons: Outlined ── */
+    --button-outlined-bg: inherit;
+    --button-outlined-border: 1px solid #585b70;
+    --button-outlined-border-radius: 6px;
+    --button-outlined-fg: #cdd6f4;
+
+    /* ── Buttons: Text ── */
+    --button-text-bg: inherit;
+    --button-text-border: none;
+    --button-text-border-radius: 6px;
+    --button-text-fg: #cdd6f4;
+
+    /* ── Chatbox ── */
+    --chatbox-message-bg: #313244;
+    --chatbox-button-fg: #cdd6f4;
+    --chatbox-button-hover-fg: #cdd6f4;
+    --chatbox-users-bg: #45475a;
+    --chatbox-tab-delete-fg: #f38ba8;
+    --chatbox-tab-delete-bg: #45475a;
+
+    /* ── Collectible Cards ── */
+    --collectible-card-bg: #313244;
+    --collectible-card-fg: #bac2de;
+    --collectible-card-hover-fg: #cdd6f4;
+    --collectible-card-border: none;
+    --collectible-card-border-radius: 22px;
+    --collectible-card-box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, .2), 0px 3px 4px 0px rgba(0, 0, 0, .14), 0px 1px 8px 0px rgba(0, 0, 0, .12);
+
+    /* ── Compact Search ── */
+    --compact-search-bg: #181825;
+    --compact-search-box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12), 0 3px 3px -2px rgba(0, 0, 0, .4);
+    --compact-search-border-radius: 27px;
+    --compact-search-fg: #bac2de;
+    --compact-search-padding: 5px;
+
+    /* ── Comparison ── */
+    --comparison-divider-fg: #cdd6f4;
+    --comparison-button-fg: #cdd6f4;
+
+    /* ── Data Tables ── */
+    --data-table-border-radius: 22px;
+    --data-table-fg: #bac2de;
+    --data-table-th-bg: #181825;
+    --data-table-thead-border: 1px solid #45475a;
+    --data-table-tr-border: 1px solid #45475a;
+    --data-table-tr-even-bg: #181825;
+    --data-table-tr-hover-bg: #313244;
+    --data-table-tr-odd-bg: #181825;
+    --data-table-tfoot-border: 3px solid #45475a;
+
+    /* ── Dialogs ── */
+    --dialog-bg: #181825;
+    --dialog-border: none;
+    --dialog-border-radius: 22px;
+    --dialog-box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12), 0 3px 3px -2px rgba(0, 0, 0, .4);
+    --dialog-fg: #cdd6f4;
+    --dialog-head-bg: #181825;
+    --dialog-head-fg: #cdd6f4;
+
+    /* ── Donations ── */
+    --donation-primary-text-color: #cdd6f4;
+    --donation-chart-daily-bg: rgba(166, 227, 161, .2);
+    --donation-chart-daily-border: #a6e3a1;
+    --donation-chart-monthly-bg: rgba(203, 166, 247, .2);
+    --donation-chart-monthly-border: #cba6f7;
+
+    /* ── Fieldsets ── */
+    --fieldset-bg: inherit;
+    --fieldset-fg: #cdd6f4;
+    --fieldset-border-radius: 20px;
+    --fieldset-border: 1px solid #585b70;
+
+    /* ── Footer ── */
+    --footer-bg: #11111b26;
+    --footer-hr-fg: #45475a;
+
+    /* ── Icon Buttons ── */
+    --icon-button-bg: inherit;
+    --icon-button-border: none;
+    --icon-button-border-radius: 9999px;
+    --icon-button-fg: #cdd6f4;
+    --icon-button-filled-bg: #a6e3a1 linear-gradient(to bottom right, #a6e3a1, #94e2d5);
+    --icon-button-filled-fg: #1e1e2e;
+    --icon-button-filled-border: none;
+
+    /* ── Text Inputs ── */
+    --input-text-border: 1px solid #585b70;
+    --input-text-border-active: 2px solid #89b4fa;
+    --input-text-border-error: 1px solid #f38ba8;
+    --input-text-border-hover: 2px solid #cdd6f4;
+    --input-text-border-radius: 20px;
+    --input-text-fg: #cdd6f4;
+    --input-text-padding: 12px;
+    --input-text-padding-active: 11px;
+    --input-text-padding-hover: 11px;
+
+    /* ── Key-Value ── */
+    --key-value-border-radius: 0;
+    --key-value-even-bg: transparent;
+    --key-value-fg: inherit;
+    --key-value-odd-bg: transparent;
+    --key-value-padding: 13px;
+
+    /* ── Labels ── */
+    --label-bg: #45475a;
+    --label-fg: #cdd6f4;
+    --label-fg-active: #89b4fa;
+    --label-fg-error: #f38ba8;
+    --label-fg-hover: #cdd6f4;
+
+    /* ── Legends ── */
+    --legend-fg: #cdd6f4;
+    --legend-bg: transparent;
+    --legend-border: none;
+    --legend-border-radius: 0;
+
+    /* ── Media Hub Cards ── */
+    --mediahub-card-bg: #313244;
+    --mediahub-card-fg: #bac2de;
+    --mediahub-card-hover-fg: #cdd6f4;
+    --mediahub-card-border: none;
+    --mediahub-card-border-radius: 22px;
+    --mediahub-card-box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, .2), 0px 3px 4px 0px rgba(0, 0, 0, .14), 0px 1px 8px 0px rgba(0, 0, 0, .12);
+
+    /* ── Meta ── */
+    --meta-backdrop-filter: brightness(30%) blur(100px);
+    --meta-dropdown-backdrop-filter: brightness(2) blur(10px);
+    --meta-dropdown-bg: rgba(49, 50, 68, .6);
+    --meta-dropdown-backdrop-filter-hover: brightness(2) blur(10px);
+    --meta-dropdown-hover-bg: rgba(205, 214, 244, .1);
+    --meta-dropdown-fg: #bac2de;
+    --meta-dropdown-hover-fg: #cdd6f4;
+    --meta-description-fg: #bac2de;
+    --meta-id-tag-fg: #bac2de;
+    --meta-id-tag-bg: transparent;
+    --meta-id-tag-hover-fg: #cdd6f4;
+    --meta-id-tag-hover-bg: rgba(205, 214, 244, .1);
+    --meta-chips-heading-fg: #a6adc8;
+    --meta-chip-icon-fg: #1e1e2e;
+    --meta-chip-icon-hover-bg: #bac2de;
+    --meta-chip-icon-bg: #a6adc8;
+    --meta-chip-name-fg: #bac2de;
+    --meta-chip-value-fg: #cdd6f4;
+    --meta-chip-value-hover-fg: #cdd6f4;
+    --meta-chip-backdrop-filter-hover: brightness(2) blur(10px);
+    --meta-chip-hover-bg: rgba(205, 214, 244, .1);
+    --meta-popup-bg: #313244;
+    --meta-popup-fg: #7f849c;
+
+    /* ── Meter ── */
+    --meter-fg: #89b4fa;
+    --meter-bg: #313244;
+
+    /* ── Notifications ── */
+    --notification-read: transparent;
+    --notification-unread: #a6e3a1;
+
+    /* ── Options ── */
+    --option-bg: #313244;
+    --option-fg: #cdd6f4;
+
+    /* ── Pagination ── */
+    --paginate-bg: #181825;
+    --paginate-bg-hover: #313244;
+    --paginate-bg-current: #313244;
+    --paginate-border-radius: 22px;
+    --paginate-fg: #bac2de;
+    --paginate-fg-disabled: #6c7086;
+    --paginate-divider: #1e1e2e;
+
+    /* ── Panels ── */
+    --panel-action-fg: #cdd6f4;
+    --panel-border: none;
+    --panel-bg: #181825;
+    --panel-fg: #bac2de;
+    --panel-body-border-radius: 22px;
+    --panel-box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12), 0 3px 3px -2px rgba(0, 0, 0, .4);
+    --panel-border-radius: 22px;
+    --panel-head-bg: #181825;
+    --panel-head-fg: #bac2de;
+    --panel-head-border-radius: 22px;
+
+    /* ── Playlist Cards ── */
+    --playlist-card-bg: #313244;
+    --playlist-card-border: none;
+    --playlist-card-border-radius: 20px;
+    --playlist-card-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2);
+    --playlist-card-fg: #bac2de;
+    --playlist-card-missing-image-bg: #45475a;
+    --playlist-card-missing-image-fg: #313244;
+
+    /* ── Posts ── */
+    --post-bg: #313244;
+    --post-fg: #cdd6f4;
+    --post-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .12), 0 1px 8px 0 rgba(0, 0, 0, .2);
+    --post-head-fg: var(--panel-fg);
+    --post-head-bg: none;
+    --post-toolbar-bg: #313244;
+    --post-toolbar-fg: #a6adc8;
+    --post-toolbar-hover-bg: #313244;
+    --post-toolbar-hover-fg: #89b4fa;
+    --post-like-fg: #a6e3a1;
+    --post-dislike-fg: #f38ba8;
+    --post-aside-bg: #313244;
+    --post-aside-fg: #6c7086;
+    --post-footer-fg: var(--panel-fg);
+
+    /* ── Prizes ── */
+    --prize-bg: #313244;
+    --prize-border-radius: 20px;
+    --prize-border: none;
+    --prize-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2);
+    --prize-fg: #bac2de;
+    --prize-heading-fg: #bac2de;
+    --prize-icon-primary-color: #a6e3a1;
+    --prize-icon-secondary-color: #f5e0dc;
+
+    /* ── Quick Search ── */
+    --quick-search-bg: #313244;
+    --quick-search-fg: #cdd6f4;
+    --quick-search-border: none;
+    --quick-search-border-radius: 18px;
+    --quick-search-box-shadow: 0 4px 6px rgba(17, 17, 27, .28);
+    --quick-search-selector-fg: #cdd6f4;
+    --quick-search-selector-hover-bg: #45475a;
+    --quick-search-selector-hover-fg: #cdd6f4;
+    --quick-search-selector-selected-bg: #313244;
+    --quick-search-selector-selected-fg: #cdd6f4;
+    --quick-search-result-bg: #313244;
+    --quick-search-result-fg: #cdd6f4;
+    --quick-search-result-hover-bg: #45475a;
+    --quick-search-result-hover-fg: #cdd6f4;
+    --quick-search-result-image-border-radius: 5px;
+    --quick-search-result-year-fg: #cdd6f4;
+    --quick-search-result-border: none;
+
+    /* ── Scrollbar ── */
+    --scrollbar-color: rgba(69, 71, 90, .6);
+
+    /* ── Secondary Nav ── */
+    --secondary-nav-bg: #11111b;
+    --secondary-nav-box-shadow: 0 8px 10px 0 rgba(0, 0, 0, .3);
+    --secondary-nav-tab-fg: #cdd6f4;
+    --secondary-nav-tab-bg: inherit;
+    --secondary-nav-tab-active-text-decoration: underline #89b4fa 2px;
+    --secondary-nav-tab-hover-fg: #cdd6f4;
+    --secondary-nav-tab-hover-bg: transparent;
+    --secondary-nav-tab-hover-text-decoration: underline #74c7ec 2px;
+    --secondary-nav-tab-menu-bg: #11111b;
+    --secondary-nav-tab-menu-fg: inherit;
+    --secondary-nav-tab-menu-border: none;
+    --secondary-nav-tab-menu-border-radius: 6px;
+    --secondary-nav-tab-menu-box-shadow: 0 12px 17px 2px rgba(0, 0, 0, .14), 0 5px 22px 4px rgba(0, 0, 0, .12), 0 7px 8px -4px rgba(0, 0, 0, .2);
+
+    /* ── Selects ── */
+    --select-border: 1px solid #585b70;
+    --select-border-active: 2px solid #89b4fa;
+    --select-border-error: 1px solid #f38ba8;
+    --select-border-hover: 2px solid #a6adc8;
+    --select-border-radius: 20px;
+    --select-fg: #cdd6f4;
+    --select-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='%23cdd6f4' d='M6 8l-1 1l5 5l5-5l-1-1l-4 4l-4-4z'/></svg>");
+    --select-padding: 11px 23px 11px 11px;
+    --select-padding-active: 10px 22px 10px 10px;
+    --select-padding-hover: 10px 22px 10px 10px;
+
+    /* ── Subforum Listings ── */
+    --subforum-listing-odd-bg: transparent;
+    --subforum-listing-even-bg: transparent;
+    --subforum-listing-border: 1px solid #45475a;
+
+    /* ── Textareas ── */
+    --textarea-border: 1px solid #585b70;
+    --textarea-border-active: 2px solid #89b4fa;
+    --textarea-border-error: 1px solid #f38ba8;
+    --textarea-border-hover: 2px solid #a6adc8;
+    --textarea-border-radius: 20px;
+    --textarea-fg: #cdd6f4;
+    --textarea-padding: 12px;
+    --textarea-padding-active: 11px;
+    --textarea-padding-hover: 11px;
+
+    /* ── Top Nav ── */
+    --top-nav-bg: #181825;
+    --top-nav-box-shadow: 0 8px 10px 0 rgba(0, 0, 0, .2);
+    --top-nav-dropdown-fg: #bac2de;
+    --top-nav-dropdown-hover-fg: #cdd6f4;
+    --top-nav-dropdown-hover-bg: #313244;
+    --top-nav-dropdown-hover-text-decoration: none;
+    --top-nav-dropdown-menu-bg: #181825;
+    --top-nav-dropdown-menu-border: none;
+    --top-nav-dropdown-menu-border-radius: 6px;
+    --top-nav-dropdown-menu-box-shadow: 0 12px 17px 2px rgba(0, 0, 0, .14), 0 5px 22px 4px rgba(0, 0, 0, .12), 0 7px 8px -4px rgba(0, 0, 0, .2);
+    --top-nav-dropdown-menu-item-fg: #bac2de;
+    --top-nav-dropdown-menu-item-bg: #181825;
+    --top-nav-dropdown-menu-item-hover-fg: inherit;
+    --top-nav-dropdown-menu-item-hover-bg: #313244;
+    --top-nav-dropdown-menu-item-hover-text-decoration: none;
+    --top-nav-dropdown-menu-item-icon-fg: #bac2de;
+    --top-nav-dropdown-menu-item-icon-bg: #313244;
+    --top-nav-ratio-bar-fg: #bac2de;
+    --top-nav-icon-bar-icon-bg: #313244;
+    --top-nav-icon-bar-icon-fg: #bac2de;
+    --top-nav-icon-bar-icon-border-radius: 50%;
+    --top-nav-icon-bar-icon-hover-bg: #313244;
+    --top-nav-icon-bar-icon-hover-fg: #cdd6f4;
+    --top-nav-stats-fg: #bac2de;
+    --top-nav-toggle-fg: #bac2de;
+
+    /* ── Torrent Cards ── */
+    --torrent-card-bg: #313244;
+    --torrent-card-fg: #cdd6f4;
+    --torrent-card-border: none;
+    --torrent-card-head-bg: #313244;
+    --torrent-card-head-fg: #cdd6f4;
+    --torrent-card-link-fg: #cdd6f4;
+    --torrent-card-genre-fg: #cdd6f4;
+
+    /* ── Torrent Groups ── */
+    --torrent-group-bg: #313244;
+    --torrent-group-header-bg: #313244;
+    --torrent-group-text: #cdd6f4;
+    --torrent-group-text-muted: #a6adc8;
+    --torrent-group-table-stripe-even: rgba(0, 0, 0, .18);
+    --torrent-group-table-stripe-odd: rgba(0, 0, 0, .1);
+    --torrent-group-hover-brightness-emphasis: 1.13;
+    --torrent-group-chip-border: #585b70;
+
+    /* ── Torrent Rows ── */
+    --torrent-row-fg: #bac2de;
+    --torrent-row-visited-fg: #cba6f7;
+    --torrent-row-sticky-bg: #45475a;
+    --torrent-row-format-fg: #bac2de;
+    --torrent-row-format-bg: transparent;
+    --torrent-row-buttons-fg: #1e1e2e;
+    --torrent-row-seeders-fg: #a6e3a1;
+    --torrent-row-leechers-fg: #f38ba8;
+    --torrent-row-completed-fg: #89b4fa;
+    --torrent-row-comments-fg: #a6e3a1;
+    --torrent-row-internal-fg: #f9e2af;
+    --torrent-row-personal-fg: #cba6f7;
+    --torrent-row-featured-fg: #f5c2e7;
+    --torrent-row-freeleech-fg: #fab387;
+    --torrent-row-double-upload-fg: #a6e3a1;
+    --torrent-row-sticky-fg: #11111b;
+    --torrent-row-highspeed-fg: #f38ba8;
+    --torrent-row-bumped-fg: #f9e2af;
+
+    /* ── Torrent Tags ── */
+    --torrent-tag-fg: #bac2de;
+    --torrent-tag-bg: transparent;
+    --torrent-tag-hover-fg: #cdd6f4;
+    --torrent-tag-hover-bg: rgba(205, 214, 244, .1);
+
+    /* ── User Stat Cards ── */
+    --user-stat-card-bg: #313244;
+    --user-stat-card-fg: #bac2de;
+    --user-stat-card-border: none;
+    --user-stat-card-border-radius: 22px;
+    --user-stat-card-box-shadow: 0px 3px 3px -2px rgba(0, 0, 0, .2), 0px 3px 4px 0px rgba(0, 0, 0, .14), 0px 1px 8px 0px rgba(0, 0, 0, .12);
+
+    /* ── Betting ── */
+    --bet-foreground: #cdd6f4;
+    --bet-foreground-alt: #cdd6f4;
+    --bet-bg: #181825;
+    --bet-bg-alt: #313244;
+    --bet-bg-item: #45475a;
+    --bet-bg-active: #45475a;
+    --bet-muted: #7f849c;
+    --bet-muted-weak: #a6adc8;
+    --bet-link-hover: #89b4fa;
+    --bet-coin-accent: #f9e2af;
+    --bet-active-tab-fg: #cdd6f4;
+    --bet-border: 1px solid rgba(205, 214, 244, .03);
+    --bet-overlay-01: rgba(205, 214, 244, .01);
+    --bet-overlay-02: rgba(205, 214, 244, .02);
+    --bet-overlay-03: rgba(205, 214, 244, .03);
+    --bet-primary: #89b4fa;
+    --bet-success: #a6e3a1;
+    --bet-warning: #f9e2af;
+    --bet-danger: #f38ba8;
+}
+
+/* ── Structural Overrides (matching Navy layout) ── */
+
+.panel__body {
+    border-bottom-left-radius: var(--panel-border-radius);
+    border-bottom-right-radius: var(--panel-border-radius);
+}
+
+.panel__header {
+    border-top-left-radius: var(--panel-border-radius);
+    border-top-right-radius: var(--panel-border-radius);
+}
+
+.panel__header:has(+ [style="display: none;"]),
+.panel__header:has(+ [style="display: none;"]) > .panel__heading,
+.panel__header:has(+ [style="display: none;"]) > .panel__actions,
+.panel__header:has(+ [style="display: none;"]) > .panel__actions > .panel__action,
+.panel__heading:has(+ [style="display: none;"]),
+.panel__heading:has(+ .data-table-wrapper):not(:has(+ .data-table-wrapper tr)) {
+    border-bottom-left-radius: var(--panel-border-radius);
+    border-bottom-right-radius: var(--panel-border-radius);
+}
+
+.panel__heading {
+    border-top-left-radius: var(--panel-border-radius);
+    border-top-right-radius: var(--panel-border-radius);
+    font-size: 19px;
+    font-weight: 700;
+    padding: 12px 15px;
+}
+
+.panel__actions,
+.panel__actions > .panel__action:last-child,
+.panel__actions > .panel__action:last-child > .form__group {
+    border-top-right-radius: var(--panel-border-radius);
+}
+
+.featured-carousel__previous {
+    border-bottom-left-radius: var(--panel-border-radius);
+}
+
+.featured-carousel__next {
+    border-bottom-right-radius: var(--panel-border-radius);
+}
+
+.data-table-wrapper:not(:has(+ .pagination)) > .data-table > thead:not(:has(+ tbody > tr)):not(:has(~ tfoot > tr)) > tr:last-of-type > th:first-of-type,
+.data-table-wrapper:not(:has(+ .pagination)) > .data-table > tbody:not(:has(~ tfoot > tr)) > tr:last-of-type td:first-of-type,
+.data-table-wrapper:not(:has(+ .pagination)) > .data-table > tfoot > tr:last-of-type > td:first-of-type {
+    border-bottom-left-radius: var(--panel-border-radius);
+}
+
+.data-table-wrapper:not(:has(+ .pagination)) > .data-table tr:last-of-type td:not([style="display: none;"]):has(+ td[style="display: none;"]),
+.data-table-wrapper:not(:has(+ .pagination)) > .data-table > thead:not(:has(+ tbody > tr)):not(:has(~ tfoot > tr)) > tr:last-of-type > th:last-of-type,
+.data-table-wrapper:not(:has(+ .pagination)) > .data-table > tbody:not(:has(~ tfoot > tr)) > tr:last-of-type td:last-of-type,
+.data-table-wrapper:not(:has(+ .pagination)) > .data-table > tfoot > tr:last-of-type > td:last-of-type {
+    border-bottom-right-radius: var(--panel-border-radius);
+}
+
+.data-table > thead:not(:has(+ tbody > tr)):not(:has(~ tfoot > tr)) > tr:last-of-type > th {
+    border-bottom: none;
+}
+
+.data-table tr td:first-of-type:not(.torrent-search--list__poster),
+.data-table tr th:first-of-type {
+    padding-left: 20px;
+}
+
+.data-table tr td:last-of-type,
+.data-table tr th:last-of-type {
+    padding-right: 20px;
+}
+
+.article-preview {
+    border-radius: 22px;
+}
+
+.page__topic--show .bbcode-input {
+    --bbcode-input-border: none;
+}
+
+.post {
+    border-radius: 22px;
+}
+
+a {
+    color: #89b4fa;
+}
+
+.chatroom__whispers {
+    border-top: 1px solid #45475a;
+}
+
+.chatbox-message {
+    border-radius: 26px;
+    padding: 0 4px;
+    color: #bac2de;
+}
+
+.chatbox-message:before {
+    border-color: transparent;
+}
+
+.chatbox__chatroom {
+    border-bottom-left-radius: 26px;
+    border-bottom-right-radius: 26px;
+}
+
+.torrent-search--grouped__result,
+.torrent-card {
+    border-radius: 22px;
+}
+
+.comment {
+    box-shadow: none;
+    background-color: var(--panel-bg);
+}
+
+.comment__aside,
+.comment__toolbar {
+    background-color: var(--panel-bg);
+}
+
+.comment__list-item + .comment__list-item > .comment {
+    border-top: 1px solid #45475a;
+    border-radius: 0;
+    padding-top: 22px;
+}
+
+.comment__replies {
+    margin-top: 4px;
+}
+
+.meta__title {
+    color: #bac2de;
+}
+
+.meta__backdrop {
+    -webkit-mask-image: linear-gradient(to bottom, #000d, #0002 65%, #0000);
+    mask-image: linear-gradient(to bottom, #000d, #0002 65%, #0000);
+}
+
+.user-card {
+    border-radius: 22px;
+}
+
+.notification--unread {
+    border-left: none !important;
+}
+
+.notification--unread:before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+    margin-right: 4px;
+    background-color: var(--notification-unread);
+    position: relative;
+}
+
+.achievement {
+    margin: 18px;
+    border-radius: 22px;
+}
+
+.text-muted {
+    color: #7f849c;
+}
+
+hr {
+    border-top: 1px solid #45475a;
+}
+
+.pagination:last-child {
+    border-bottom-left-radius: var(--panel-border-radius);
+    border-bottom-right-radius: var(--panel-border-radius);
+}
+
+li.pagination__next,
+li.pagination__previous {
+    margin: 2px;
+}
+
+a.pagination__next,
+a.pagination__previous,
+li.pagination__next,
+li.pagination__previous {
+    border-radius: 9999px;
+    height: 36px;
+    width: 86px;
+    line-height: 36px;
+}
+
+.pagination__link,
+.pagination__current {
+    border-radius: 9999px;
+    height: 36px;
+    width: 36px;
+    margin: 2px;
+    line-height: 36px;
+}
