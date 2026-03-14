@@ -672,22 +672,7 @@ a.text-bright:hover {
   border: 1px solid rgba(137, 180, 250, 0.3);
 }
 
-/* ── Seeding/leeching activity indicators ─────────────────── */
-.torrent-activity-indicator--seeding {
-  background: rgba(166, 227, 161, 0.1) !important; /* Green subtle glow */
-  color: #a6e3a1 !important;
-  box-shadow: none !important;
-  text-shadow: none !important;
-}
-
-.torrent-activity-indicator--leeching {
-  background: rgba(243, 139, 168, 0.1) !important; /* Red subtle glow */
-  color: #f38ba8 !important;
-  box-shadow: none !important;
-  text-shadow: none !important;
-}
-
-/* Seeder/leecher counts in the meta bar */
+/* ── Seeder/leecher meta bar stat colors ──────────────────── */
 .torrent-meta-bar__stat--seeders {
   color: #a6e3a1;                 /* Green */
 }
