@@ -467,9 +467,13 @@ a.text-bright:hover {
 .top-nav__ratio-bar.top-nav__ratio-bar {
   background: #181825;                                   /* Mantle */
   border: solid 1px #313244;                             /* Surface0 */
-  box-shadow: 0 3px 10px rgba(17, 17, 27, 0.64);        /* Crust-based shadow */
+  box-shadow: 0 4px 14px rgba(17, 17, 27, 0.75),        /* stronger float shadow */
+              0 1px 3px rgba(17, 17, 27, 0.4);
   border-radius: 5px;
   padding: 4px 12px;                                     /* breathing room */
+  transform: translateY(4px);                            /* hang over nav edge */
+  position: relative;
+  z-index: 10;                                           /* float above content */
 }
 
 /* ── Top-nav dropdown (compact) ────────────────────────────── */
