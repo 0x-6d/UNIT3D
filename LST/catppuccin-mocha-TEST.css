@@ -420,7 +420,9 @@
 
 /* ── Body background pattern ──────────────────────────────── */
 body {
-  background: #1e1e2e url('Assets/body_bg.svg') repeat;
+  background: #1e1e2e
+    url('https://raw.githubusercontent.com/xzin-CoRK/stylesheets/refs/heads/main/Assets/body_bg.svg');
+  background-size: 512px auto;
 }
 
 /* ── Links ─────────────────────────────────────────────────── */
