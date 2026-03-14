@@ -549,3 +549,73 @@ a.text-bright:hover {
 .sent > div:not(.system):before {
   border-right-color: #313244 !important;
 }
+
+/* ── Torrent action buttons (Catppuccin Mocha) ────────────── */
+.torrent-actions__btn--download {
+  background: #a6e3a1;            /* Green */
+  color: #1e1e2e !important;      /* Base */
+  border: none;
+}
+
+.torrent-actions__btn--thank {
+  background: #f38ba8;            /* Red */
+  color: #1e1e2e !important;
+  border: none;
+}
+
+.torrent-actions__btn--secondary {
+  background: transparent;
+  color: #bac2de;                 /* Subtext1 */
+  border: 1px solid #585b70;      /* Surface2 */
+}
+
+.torrent-actions__btn--secondary:hover {
+  background: #313244;            /* Surface0 */
+  color: #cdd6f4;                 /* Text */
+}
+
+/* ── Torrent badges (Catppuccin Mocha) ────────────────────── */
+.torrent-badges__item {
+  background: #181825;            /* Mantle */
+  border: 1px solid #313244;      /* Surface0 */
+}
+
+.torrent-badges__item--seeding {
+  color: #a6e3a1;                 /* Green */
+  border-color: rgba(166, 227, 161, 0.3);
+}
+
+.torrent-badges__item--personal {
+  color: #cba6f7;                 /* Mauve */
+  border-color: rgba(203, 166, 247, 0.3);
+}
+
+.torrent-badges__item--featured {
+  color: #f9e2af;                 /* Yellow */
+  border-color: rgba(249, 226, 175, 0.3);
+}
+
+.torrent-badges__item--sticky {
+  color: #f38ba8;                 /* Red */
+  border-color: rgba(243, 139, 168, 0.3);
+}
+
+.torrent-badges__item--highspeed {
+  color: #fab387;                 /* Peach */
+  border-color: rgba(250, 179, 135, 0.3);
+}
+
+.torrent-badges__item--thanks {
+  color: #f5c2e7;                 /* Pink */
+  border-color: rgba(245, 194, 231, 0.3);
+}
+
+.torrent-badges__item--freeleech {
+  color: #f9e2af;                 /* Yellow */
+  border-color: rgba(249, 226, 175, 0.3);
+}
+
+.torrent-badges__item--double-upload {
+  color: #a6e3a1;                 /* Green */
+  border-color: rgba(166, 227, 161, 0.3);
+}
