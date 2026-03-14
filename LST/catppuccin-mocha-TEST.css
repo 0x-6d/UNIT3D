@@ -909,14 +909,3 @@ a.text-bright:hover {
   color: #a6e3a1 !important;
 }
 }
-
-/* ── BON pool submit button ──────────────────────────────── */
-.form__button--filled.bon-pool__submit-btn {
-  background: #313244 !important;     /* Surface0 */
-  color: #89b4fa !important;          /* Blue */
-  border: 1px solid rgba(137, 180, 250, 0.3);
-}
-.form__button--filled.bon-pool__submit-btn:hover {
-  background: #45475a !important;     /* Surface1 */
-  color: #cdd6f4 !important;          /* Text */
-}
