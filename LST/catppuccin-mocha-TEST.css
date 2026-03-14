@@ -671,3 +671,10 @@ a.text-bright:hover {
   color: #89b4fa !important;      /* Blue */
   border: 1px solid rgba(137, 180, 250, 0.3);
 }
+
+/* ── Seeding glow: calm down on torrent page meta bar ────── */
+.torrent-meta-bar__stat.torrent-activity-indicator--seeding {
+  text-shadow:
+    0 0 0   var(--torrent-row-seeders-fg),
+    0 0 4px var(--torrent-row-seeders-fg);
+}
