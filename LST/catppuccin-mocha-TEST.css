@@ -465,7 +465,7 @@ a.text-bright:hover {
 
 /* ── Top-nav ratio bar ─────────────────────────────────────── */
 .top-nav__ratio-bar.top-nav__ratio-bar {
-  background: #11111b;                                   /* Crust */
+  background: #181825;                                   /* Mantle */
   border: solid 1px #313244;                             /* Surface0 */
   box-shadow: 0 3px 10px rgba(17, 17, 27, 0.64);        /* Crust-based shadow */
   border-radius: 5px;
