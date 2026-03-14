@@ -1,0 +1,517 @@
+/*
+ * Tokyo Night Theme Override
+ * https://github.com/enkia/tokyo-night-vscode-theme
+ *
+ * Load this stylesheet AFTER the default theme CSS.
+ * It overrides CSS custom properties with the Tokyo Night palette.
+ *
+ * Palette reference:
+ *   bg:           #1a1b26    bg_dark:      #16161e    bg_highlight: #292e42
+ *   terminal_black:#414868   fg:           #c0caf5    fg_dark:      #a9b1d6
+ *   fg_gutter:    #3b4261    comment:      #565f89    dark3:        #545c7e
+ *   dark5:        #737aa2    blue0:        #3d59a1    blue:         #7aa2f7
+ *   cyan:         #7dcfff    green:        #9ece6a    green1:       #73daca
+ *   magenta:      #bb9af7    orange:       #ff9e64    purple:       #9d7cd8
+ *   red:          #f7768e    red1:         #db4b4b    teal:         #1abc9c
+ *   yellow:       #e0af68    blue1:        #2ac3de    blue5:        #89ddff
+ */
+
+:root {
+  /* ── Core text ─────────────────────────────────────────── */
+  --text-color: #c0caf5;              /* fg */
+  --text-primary: #c0caf5;
+
+  /* ── Accent palette ────────────────────────────────────── */
+  --color-dark-magenta: #292e42;      /* bg_highlight */
+  --color-dark-green: #292e42;
+  --color-dark-blue: #292e42;
+  --color-dark-red: #292e42;
+
+  --color-red: #f7768e;               /* red */
+  --color-light-red: #f7768e;
+  --color-green: #9ece6a;             /* green */
+  --color-light-green: #9ece6a;
+  --color-yellow: #e0af68;            /* yellow */
+  --color-light-yellow: #e0af68;
+  --color-magenta: #bb9af7;           /* magenta */
+  --color-light-magenta: #bb9af7;
+  --color-dark-purple: #3d59a1;       /* blue0 */
+  --color-purple: #9d7cd8;            /* purple */
+  --color-light-purple: #bb9af7;      /* magenta */
+  --color-blue: #7aa2f7;              /* blue */
+  --color-light-blue: #7dcfff;        /* cyan */
+  --color-bright-white: #c0caf5;      /* fg */
+  --color-light-orange: #ff9e64;      /* orange */
+
+  /* ── Body ──────────────────────────────────────────────── */
+  --body-bg: #1a1b26;                 /* bg */
+  --body-fg: #c0caf5;
+
+  /* ── UI accent / status ────────────────────────────────── */
+  --ui-accent-fg: #7aa2f7;            /* blue */
+  --ui-success-fg: #9ece6a;           /* green */
+  --ui-success-fg-strong: #9ece6a;
+  --ui-info-fg: #7aa2f7;              /* blue */
+  --ui-info-fg-weak: #7dcfff;         /* cyan */
+  --ui-warning-fg: #e0af68;           /* yellow */
+  --ui-warning-fg-strong: #ff9e64;    /* orange */
+  --ui-danger-fg: #f7768e;            /* red */
+  --ui-danger-fg-weak: #db4b4b;       /* red1 */
+
+  /* ── Scrollbar ─────────────────────────────────────────── */
+  --scrollbar-color: rgba(65, 72, 104, 0.35); /* terminal_black faded */
+
+  /* ── Message bubbles ───────────────────────────────────── */
+  --message-bubble-bg: #292e42;       /* bg_highlight */
+  --message-bubble-fg: currentColor;
+  --message-bubble-box-shadow: 0 1px 2px rgba(22, 22, 30, 0.5);
+
+  /* ── Panels ────────────────────────────────────────────── */
+  --panel-bg: #1a1b26;                /* bg */
+  --panel-fg: #c0caf5;
+  --panel-head-bg: #16161e;           /* bg_dark */
+  --panel-head-fg: #c0caf5;
+  --panel-action-fg: #a9b1d6;         /* fg_dark */
+  --panel-border: none;
+  --panel-box-shadow: none;
+  --panel-bg-secondary: #16161e;
+
+  /* ── Dialogs ───────────────────────────────────────────── */
+  --dialog-bg: #1a1b26;
+  --dialog-fg: #c0caf5;
+  --dialog-head-bg: #16161e;
+  --dialog-head-fg: #c0caf5;
+  --dialog-border: 1px solid #292e42;
+  --dialog-border-radius: 10px;
+
+  /* ── Top nav ───────────────────────────────────────────── */
+  --top-nav-bg: #16161e;              /* bg_dark */
+  --top-nav-box-shadow: 0 2px 8px rgba(22, 22, 30, 0.6);
+  --top-nav-dropdown-fg: #a9b1d6;
+  --top-nav-dropdown-hover-fg: #c0caf5;
+  --top-nav-dropdown-hover-bg: #292e42;
+  --top-nav-dropdown-hover-text-decoration: none;
+  --top-nav-dropdown-menu-bg: #1a1b26;
+  --top-nav-dropdown-menu-border: 1px solid #292e42;
+  --top-nav-dropdown-menu-border-radius: 8px;
+  --top-nav-dropdown-menu-box-shadow: 0 8px 24px rgba(22, 22, 30, 0.7);
+  --top-nav-dropdown-menu-item-fg: #a9b1d6;
+  --top-nav-dropdown-menu-item-bg: transparent;
+  --top-nav-dropdown-menu-item-hover-fg: #c0caf5;
+  --top-nav-dropdown-menu-item-hover-bg: #292e42;
+  --top-nav-dropdown-menu-item-hover-text-decoration: none;
+  --top-nav-dropdown-menu-item-icon-fg: #c0caf5;
+  --top-nav-dropdown-menu-item-icon-bg: #414868;
+  --top-nav-ratio-bar-fg: #c0caf5;
+  --top-nav-icon-bar-icon-bg: #292e42;
+  --top-nav-icon-bar-icon-fg: #a9b1d6;
+  --top-nav-icon-bar-icon-border-radius: 50%;
+  --top-nav-icon-bar-icon-hover-bg: #414868;
+  --top-nav-icon-bar-icon-hover-fg: #c0caf5;
+  --top-nav-stats-fg: #737aa2;        /* dark5 */
+  --top-nav-toggle-fg: #737aa2;
+
+  /* ── Secondary nav ─────────────────────────────────────── */
+  --secondary-nav-bg: #16161e;
+  --secondary-nav-box-shadow: 0 4px 10px rgba(22, 22, 30, 0.5);
+  --secondary-nav-tab-fg: #737aa2;
+  --secondary-nav-tab-bg: inherit;
+  --secondary-nav-tab-active-text-decoration: underline #7aa2f7 2px;
+  --secondary-nav-tab-hover-fg: #c0caf5;
+  --secondary-nav-tab-hover-bg: transparent;
+  --secondary-nav-tab-hover-text-decoration: underline #7aa2f7 2px;
+  --secondary-nav-tab-menu-bg: #292e42;
+  --secondary-nav-tab-menu-fg: inherit;
+  --secondary-nav-tab-menu-border: 1px solid #414868;
+  --secondary-nav-tab-menu-border-radius: 8px;
+  --secondary-nav-tab-menu-box-shadow: 0 8px 24px rgba(22, 22, 30, 0.7);
+
+  /* ── Breadcrumbs ───────────────────────────────────────── */
+  --breadcrumb-fg: #565f89;           /* comment */
+  --breadcrumb-active-fg: #a9b1d6;    /* fg_dark */
+  --breadcrumb-hover-fg: #c0caf5;
+
+  /* ── Buttons ───────────────────────────────────────────── */
+  --button-filled-bg: #7aa2f7;        /* blue */
+  --button-filled-fg: #1a1b26;        /* bg (dark on blue) */
+  --button-filled-border: none;
+  --button-outlined-bg: transparent;
+  --button-outlined-border: 1px solid #414868;
+  --button-outlined-fg: #c0caf5;
+  --button-text-fg: #c0caf5;
+
+  --icon-button-filled-bg: #7aa2f7;
+  --icon-button-filled-fg: #1a1b26;
+  --icon-button-fg: currentColor;
+
+  /* ── Inputs / textareas / selects ──────────────────────── */
+  --input-text-border: 1px solid #414868;
+  --input-text-border-active: 2px solid #7aa2f7;
+  --input-text-border-hover: 2px solid #545c7e;
+  --input-text-border-error: 1px solid #f7768e;
+  --input-text-fg: #c0caf5;
+
+  --textarea-border: 1px solid #414868;
+  --textarea-border-active: 2px solid #7aa2f7;
+  --textarea-border-hover: 2px solid #545c7e;
+  --textarea-border-error: 1px solid #f7768e;
+  --textarea-fg: #c0caf5;
+
+  --select-border: 1px solid #414868;
+  --select-border-active: 2px solid #7aa2f7;
+  --select-border-hover: 2px solid #545c7e;
+  --select-border-error: 1px solid #f7768e;
+  --select-fg: #c0caf5;
+  --select-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='%23c0caf5' d='M6 8l-1 1l5 5l5-5l-1-1l-4 4l-4-4z'/></svg>");
+
+  --fieldset-fg: #a9b1d6;
+  --fieldset-border: 1px solid #414868;
+
+  --label-bg: #414868;
+  --label-fg: #737aa2;
+  --label-fg-active: #7aa2f7;
+  --label-fg-error: #f7768e;
+  --label-fg-hover: #545c7e;
+  --legend-fg: #737aa2;
+
+  /* ── Data tables ───────────────────────────────────────── */
+  --data-table-fg: #c0caf5;
+  --data-table-th-bg: #16161e;
+  --data-table-tr-border: 1px solid #292e42;
+  --data-table-tr-even-bg: #1a1b26;
+  --data-table-tr-odd-bg: rgba(41, 46, 66, 0.35);
+  --data-table-tr-hover-bg: #292e42;
+
+  /* ── Key-value ─────────────────────────────────────────── */
+  --key-value-fg: #c0caf5;
+  --key-value-even-bg: #1a1b26;
+  --key-value-odd-bg: rgba(41, 46, 66, 0.35);
+
+  /* ── Alerts ────────────────────────────────────────────── */
+  --alert-bg: #16161e;
+  --alert-fg: #a9b1d6;
+  --alert-gap-color: #414868;
+
+  /* ── Achievements ──────────────────────────────────────── */
+  --achievement-bg: #1a1b26;
+  --achievement-fg: #c0caf5;
+  --achievement-progress-bg: #73daca;  /* green1 / teal accent */
+
+  /* ── Articles ──────────────────────────────────────────── */
+  --article-card-bg: #16161e;
+  --article-card-fg: #a9b1d6;
+  --article-card-head-fg: #c0caf5;
+  --article-card-time-fg: #737aa2;
+  --article-box-shadow: 0 2px 8px rgba(22, 22, 30, 0.5);
+
+  /* ── BBCode ────────────────────────────────────────────── */
+  --bbcode-input-header-bg: #16161e;
+  --bbcode-input-body-bg: #16161e;
+  --bbcode-input-border: 1px solid #414868;
+  --bbcode-rendered-fg-default: #c0caf5;
+  --bbcode-rendered-fg-muted: #737aa2;
+  --bbcode-rendered-fg-subtle: #414868;
+  --bbcode-rendered-canvas-default: transparent;
+  --bbcode-rendered-canvas-subtle: #292e42;
+  --bbcode-rendered-border-default: #414868;
+  --bbcode-rendered-border-muted: #3b4261;
+  --bbcode-rendered-neutral-muted: rgba(65, 72, 104, 0.4);
+  --bbcode-rendered-accent-fg: #7aa2f7;
+  --bbcode-rendered-accent-emphasis: #3d59a1;
+  --bbcode-rendered-attention-subtle: #bb9af7;
+  --bbcode-rendered-danger-fg: #f7768e;
+  --bbcode-rendered-quote-bg: rgba(41, 46, 66, 0.4);
+  --bbcode-rendered-quote-border: #73daca; /* green1 */
+
+  /* ── Chatbox ───────────────────────────────────────────── */
+  --chatbox-message-bg: #292e42;
+  --chatbox-button-fg: #565f89;
+  --chatbox-button-hover-fg: #737aa2;
+  --chatbox-users-bg: #16161e;
+  --chatbox-tab-delete-fg: #f7768e;
+  --chatbox-tab-delete-bg: #414868;
+
+  /* ── Collectible cards ─────────────────────────────────── */
+  --collectible-card-bg: #16161e;
+  --collectible-card-fg: #a9b1d6;
+  --collectible-card-hover-fg: #c0caf5;
+
+  /* ── Compact search ────────────────────────────────────── */
+  --compact-search-bg: #292e42;
+  --compact-search-fg: #c0caf5;
+
+  /* ── Donation ──────────────────────────────────────────── */
+  --donation-border-color: #292e42;
+  --donation-box-shadow-color: rgba(22, 22, 30, 0.5);
+  --donation-primary-text-color: #c0caf5;
+  --donation-secondary-text-color: #a9b1d6;
+  --donation-background-color: #16161e;
+  --donation-price-days-color: #ff9e64;            /* orange */
+  --donation-chart-daily-bg: rgba(115, 218, 202, 0.2);    /* green1 */
+  --donation-chart-daily-border: #73daca;
+  --donation-chart-monthly-bg: rgba(187, 154, 247, 0.2);  /* magenta */
+  --donation-chart-monthly-border: #bb9af7;
+
+  /* ── Footer ────────────────────────────────────────────── */
+  --footer-bg: #16161e;               /* bg_dark */
+  --footer-hr-fg: #292e42;
+
+  /* ── Media hub ─────────────────────────────────────────── */
+  --mediahub-card-bg: #16161e;
+  --mediahub-card-fg: #a9b1d6;
+  --mediahub-card-hover-fg: #c0caf5;
+
+  /* ── Meta (backdrop, dropdowns, chips) ─────────────────── */
+  --meta-backdrop-filter: brightness(20%) blur(100px);
+  --meta-dropdown-bg: rgba(41, 46, 66, 0.7);
+  --meta-dropdown-hover-bg: rgba(65, 72, 104, 0.5);
+  --meta-dropdown-fg: #a9b1d6;
+  --meta-dropdown-hover-fg: #c0caf5;
+  --meta-description-fg: #c0caf5;
+  --meta-id-tag-fg: #c0caf5;
+  --meta-id-tag-hover-fg: #c0caf5;
+  --meta-id-tag-hover-bg: rgba(65, 72, 104, 0.4);
+  --meta-chips-heading-fg: #a9b1d6;
+  --meta-chip-icon-fg: #1a1b26;
+  --meta-chip-icon-bg: #a9b1d6;
+  --meta-chip-icon-hover-bg: #c0caf5;
+  --meta-chip-name-fg: #c0caf5;
+  --meta-chip-value-fg: #737aa2;
+  --meta-chip-value-hover-fg: #a9b1d6;
+  --meta-chip-hover-bg: rgba(65, 72, 104, 0.4);
+  --meta-popup-bg: #16161e;
+  --meta-popup-fg: #565f89;
+
+  /* ── Meter ─────────────────────────────────────────────── */
+  --meter-fg: #292e42;
+  --meter-bg: #414868;
+
+  /* ── Notifications ─────────────────────────────────────── */
+  --notification-read: transparent;
+  --notification-unread: #7aa2f7;      /* blue */
+
+  /* ── Option / Pagination ───────────────────────────────── */
+  --option-bg: #292e42;
+  --option-fg: #737aa2;
+
+  --paginate-bg: #16161e;
+  --paginate-bg-hover: #292e42;
+  --paginate-bg-current: #292e42;
+  --paginate-fg: #737aa2;
+  --paginate-fg-disabled: #414868;
+  --paginate-divider: #292e42;
+
+  /* ── Playlists ─────────────────────────────────────────── */
+  --playlist-card-bg: #16161e;
+  --playlist-card-fg: #a9b1d6;
+  --playlist-card-border: 1px solid #292e42;
+  --playlist-card-box-shadow: 0 4px 12px rgba(22, 22, 30, 0.6);
+  --playlist-card-missing-image-bg: #292e42;
+  --playlist-card-missing-image-fg: #737aa2;
+
+  /* ── Prizes ────────────────────────────────────────────── */
+  --prize-bg: #16161e;
+  --prize-fg: #a9b1d6;
+  --prize-heading-fg: #c0caf5;
+  --prize-border: 1px solid #292e42;
+  --prize-box-shadow: 0 4px 12px rgba(22, 22, 30, 0.6);
+  --prize-icon-primary-color: #73daca; /* green1 */
+  --prize-icon-secondary-color: #c0caf5;
+
+  /* ── Posts ──────────────────────────────────────────────── */
+  --post-bg: #1a1b26;
+  --post-fg: #c0caf5;
+  --post-head-fg: #c0caf5;
+  --post-toolbar-bg: #16161e;
+  --post-toolbar-fg: #a9b1d6;
+  --post-toolbar-hover-bg: #292e42;
+  --post-like-fg: #9ece6a;            /* green */
+  --post-dislike-fg: #f7768e;         /* red */
+  --post-aside-bg: #292e42;
+  --post-aside-fg: #c0caf5;
+  --post-footer-fg: #c0caf5;
+
+  /* ── Quick search ──────────────────────────────────────── */
+  --quick-search-bg: #292e42;
+  --quick-search-fg: #a9b1d6;
+  --quick-search-border: 1px solid #414868;
+  --quick-search-border-radius: 16px;
+  --quick-search-box-shadow: 0 4px 12px rgba(22, 22, 30, 0.6);
+  --quick-search-selector-fg: #737aa2;
+  --quick-search-selector-hover-bg: #414868;
+  --quick-search-selector-hover-fg: #c0caf5;
+  --quick-search-selector-selected-bg: #414868;
+  --quick-search-selector-selected-fg: #c0caf5;
+  --quick-search-result-bg: #292e42;
+  --quick-search-result-fg: #a9b1d6;
+  --quick-search-result-hover-bg: #414868;
+  --quick-search-result-hover-fg: #c0caf5;
+  --quick-search-result-year-fg: #565f89;
+
+  /* ── Subforum listing ──────────────────────────────────── */
+  --subforum-listing-odd-bg: rgba(41, 46, 66, 0.3);
+  --subforum-listing-even-bg: transparent;
+
+  /* ── Torrent cards ─────────────────────────────────────── */
+  --torrent-card-bg: #1a1b26;
+  --torrent-card-fg: #c0caf5;
+  --torrent-card-head-bg: #16161e;
+  --torrent-card-head-fg: #c0caf5;
+  --torrent-card-link-fg: #c0caf5;
+  --torrent-card-genre-fg: #c0caf5;
+
+  /* ── Torrent groups ────────────────────────────────────── */
+  --torrent-group-bg: #16161e;
+  --torrent-group-header-bg: #292e42;
+  --torrent-group-text: #c0caf5;
+  --torrent-group-text-muted: #565f89;
+  --torrent-group-table-stripe-even: rgba(192, 202, 245, 0.02);
+  --torrent-group-table-stripe-odd: rgba(192, 202, 245, 0.05);
+  --torrent-group-chip-border: rgba(192, 202, 245, 0.05);
+  --torrent-group-hover-brightness-emphasis: 1.2;
+
+  /* ── Torrent rows ──────────────────────────────────────── */
+  --torrent-row-fg: #a9b1d6;
+  --torrent-row-visited-fg: #bb9af7;    /* magenta */
+  --torrent-row-sticky-bg: #414868;
+  --torrent-row-format-fg: #a9b1d6;
+  --torrent-row-format-bg: #292e42;
+  --torrent-row-buttons-fg: currentColor;
+  --torrent-row-seeders-fg: #9ece6a;    /* green */
+  --torrent-row-leechers-fg: #f7768e;   /* red */
+  --torrent-row-completed-fg: #7aa2f7;  /* blue */
+  --torrent-row-comments-fg: #73daca;   /* green1 */
+  --torrent-row-internal-fg: #e0af68;   /* yellow */
+  --torrent-row-personal-fg: #9d7cd8;   /* purple */
+  --torrent-row-featured-fg: #bb9af7;   /* magenta */
+  --torrent-row-freeleech-fg: #e0af68;  /* yellow */
+  --torrent-row-double-upload-fg: #9ece6a;
+  --torrent-row-sticky-fg: #a9b1d6;
+  --torrent-row-highspeed-fg: #f7768e;
+  --torrent-row-bumped-fg: #ff9e64;     /* orange */
+
+  /* ── Torrent tags ──────────────────────────────────────── */
+  --torrent-tag-fg: #c0caf5;
+  --torrent-tag-bg: transparent;
+  --torrent-tag-hover-fg: #c0caf5;
+  --torrent-tag-hover-bg: rgba(65, 72, 104, 0.4);
+
+  /* ── User stat cards ───────────────────────────────────── */
+  --user-stat-card-bg: #16161e;
+  --user-stat-card-fg: #a9b1d6;
+
+  /* ── Betting ───────────────────────────────────────────── */
+  --bet-foreground: #a9b1d6;
+  --bet-foreground-alt: #c0caf5;
+  --bet-bg: #16161e;
+  --bet-bg-alt: #1a1b26;
+  --bet-bg-item: #292e42;
+  --bet-bg-active: #414868;
+  --bet-muted: #565f89;
+  --bet-muted-weak: #737aa2;
+  --bet-link-hover: #7aa2f7;
+  --bet-coin-accent: #e0af68;           /* yellow */
+  --bet-active-tab-fg: #c0caf5;
+  --bet-border: 1px solid rgba(192, 202, 245, 0.06);
+  --bet-overlay-01: rgba(192, 202, 245, 0.01);
+  --bet-overlay-02: rgba(192, 202, 245, 0.02);
+  --bet-overlay-03: rgba(192, 202, 245, 0.03);
+  --bet-primary: #7aa2f7;              /* blue */
+  --bet-success: #9ece6a;              /* green */
+  --bet-warning: #e0af68;              /* yellow */
+  --bet-danger: #f7768e;               /* red */
+}
+
+/* ── Links ─────────────────────────────────────────────────── */
+a {
+  color: #7aa2f7; /* blue */
+}
+a:hover {
+  color: #7dcfff; /* cyan */
+}
+
+/* ── Utility text classes ──────────────────────────────────── */
+.text-bright {
+  color: #c0caf5;
+}
+a.text-bright:focus,
+a.text-bright:hover {
+  color: #c0caf5;
+}
+.text-blue {
+  color: #7aa2f7;
+}
+.text-purple {
+  color: #bb9af7;
+}
+.text-green {
+  color: #9ece6a;
+}
+.text-muted {
+  color: #565f89; /* comment */
+}
+.text-red {
+  color: #f7768e;
+}
+.text-orange {
+  color: #ff9e64;
+}
+.text-pink {
+  color: #bb9af7;
+}
+.text-danger {
+  color: #f7768e;
+}
+
+/* ── Badges ────────────────────────────────────────────────── */
+.badge-user {
+  background-color: #292e42;
+  text-shadow: 1px 1px #16161e;
+}
+
+/* ── Footer icon ───────────────────────────────────────────── */
+.footer__icon {
+  color: #bb9af7; /* magenta */
+}
+
+/* ── Chatbox frame overrides ───────────────────────────────── */
+#frame {
+  background: #1a1b26;
+}
+#frame .content .messages ul li {
+  border-bottom: 1px dashed #292e42;
+}
+.chatbox .typing {
+  color: #c0caf5;
+}
+#frame .content .messages ul li.sent h4 .text-muted {
+  color: #565f89;
+}
+#frame .content .messages ul li > img {
+  border: 3px solid #7aa2f7;
+}
+#frame .content .message-input .wrap input {
+  color: #c0caf5;
+  background: #292e42;
+}
+#frame .content .message-input .wrap .attachment {
+  color: #737aa2;
+}
+#frame .content .message-input .wrap button {
+  background: #3d59a1;    /* blue0 */
+  color: #c0caf5;
+}
+#frame .content .message-input .wrap button:hover {
+  background: #414868;
+}
+
+/* ── Sent message bubble overrides ─────────────────────────── */
+.sent > h4 {
+  background-color: #292e42 !important;
+}
+.sent > div {
+  background-color: #292e42 !important;
+}
+.sent > div:not(.system):before {
+  border-right-color: #292e42 !important;
+}
