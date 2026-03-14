@@ -671,18 +671,3 @@ a.text-bright:hover {
   color: #89b4fa !important;      /* Blue */
   border: 1px solid rgba(137, 180, 250, 0.3);
 }
-
-/* ── Seeder/leecher meta bar stat colors ──────────────────── */
-.torrent-meta-bar__stat--seeders {
-  color: #a6e3a1;                                        /* Green */
-  background: rgba(166, 227, 161, 0.15) !important;
-  box-shadow: 0 0 8px rgba(166, 227, 161, 0.25) !important;
-  text-shadow: 0 0 4px rgba(166, 227, 161, 0.3) !important;
-}
-
-.torrent-meta-bar__stat--leechers {
-  color: #f38ba8;                                        /* Red */
-  background: rgba(243, 139, 168, 0.15) !important;
-  box-shadow: 0 0 8px rgba(243, 139, 168, 0.25) !important;
-  text-shadow: 0 0 4px rgba(243, 139, 168, 0.3) !important;
-}
