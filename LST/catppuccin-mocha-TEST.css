@@ -576,8 +576,8 @@ a.text-bright:hover {
 
 /* ── Torrent badges (Catppuccin Mocha) ────────────────────── */
 .torrent-badges__item {
-  background: #181825;            /* Mantle */
-  border: 1px solid #313244;      /* Surface0 */
+  background: #313244 !important; /* Surface0 — works on both normal and sticky rows */
+  border: 1px solid #45475a;      /* Surface1 */
 }
 
 .torrent-badges__item--seeding {
