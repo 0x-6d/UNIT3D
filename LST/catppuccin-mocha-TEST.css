@@ -132,7 +132,7 @@
   --button-filled-fg: #1e1e2e;        /* Base (dark on blue) */
   --button-filled-border: none;
   --button-outlined-bg: transparent;
-  --button-outlined-border: 1px solid currentColor; /* inherits text color */
+  --button-outlined-border: 1px solid #585b70; /* Surface2 */
   --button-outlined-fg: #cdd6f4;
   --button-text-fg: #cdd6f4;
 
