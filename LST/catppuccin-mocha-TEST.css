@@ -629,6 +629,11 @@ a.text-bright:hover {
   border-color: rgba(166, 227, 161, 0.3);
 }
 
+.torrent-badges__item--comments {
+  color: #89b4fa;                 /* Blue */
+  border-color: rgba(137, 180, 250, 0.3);
+}
+
 /* ── Torrent tools / moderation buttons (Catppuccin Mocha) ── */
 .torrent-tools__btn {
   background: #313244 !important; /* Surface0 */
