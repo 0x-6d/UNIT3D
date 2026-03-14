@@ -664,3 +664,10 @@ a.text-bright:hover {
 .torrent-tools__separator {
   border-color: #313244;          /* Surface0 */
 }
+
+/* ── Trailer button (meta tag) ────────────────────────────── */
+.torrent-meta__tag--trailer {
+  background: #313244 !important; /* Surface0 */
+  color: #89b4fa !important;      /* Blue */
+  border: 1px solid rgba(137, 180, 250, 0.3);
+}
