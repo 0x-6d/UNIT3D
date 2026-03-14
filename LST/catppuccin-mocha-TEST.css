@@ -619,3 +619,41 @@ a.text-bright:hover {
   color: #a6e3a1;                 /* Green */
   border-color: rgba(166, 227, 161, 0.3);
 }
+
+/* ── Torrent tools / moderation buttons (Catppuccin Mocha) ── */
+.torrent-tools__btn {
+  background: #313244 !important; /* Surface0 */
+  color: #bac2de;                 /* Subtext1 */
+  border: 1px solid #45475a;      /* Surface1 */
+}
+
+.torrent-tools__btn:hover {
+  background: #45475a !important; /* Surface1 */
+  color: #cdd6f4;                 /* Text */
+}
+
+.torrent-tools__btn--buff {
+  color: #cba6f7;                 /* Mauve */
+  border-color: rgba(203, 166, 247, 0.3);
+}
+
+.torrent-tools__btn--warning {
+  color: #fab387;                 /* Peach */
+  border-color: rgba(250, 179, 135, 0.3);
+}
+
+.torrent-tools__btn--danger,
+.torrent-tools__btn--delete {
+  color: #f38ba8;                 /* Red */
+  border-color: rgba(243, 139, 168, 0.3);
+}
+
+.torrent-tools__status-badge--success {
+  color: #a6e3a1;                 /* Green */
+  background: rgba(166, 227, 161, 0.1);
+  border: 1px solid rgba(166, 227, 161, 0.3);
+}
+
+.torrent-tools__separator {
+  border-color: #313244;          /* Surface0 */
+}
