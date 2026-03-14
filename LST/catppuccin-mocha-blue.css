@@ -23,6 +23,8 @@
   --text-primary: #cdd6f4;
 
   /* ── Accent palette ────────────────────────────────────── */
+  /* NOTE: light/dark variants intentionally map to the same hex
+     when no Mocha equivalent exists — upstream consumes both vars. */
   --color-dark-magenta: #45475a;      /* Surface1 */
   --color-dark-green: #313244;        /* Surface0 */
   --color-dark-blue: #313244;
@@ -73,7 +75,7 @@
   --panel-head-bg: #181825;           /* Mantle */
   --panel-head-fg: #cdd6f4;
   --panel-action-fg: #bac2de;         /* Subtext1 */
-  --panel-border: none;
+  --panel-border: 1px solid #313244;      /* Surface0 */
   --panel-box-shadow: none;
   --panel-bg-secondary: #181825;
 
@@ -368,7 +370,7 @@
   /* ── Torrent rows ──────────────────────────────────────── */
   --torrent-row-fg: #bac2de;
   --torrent-row-visited-fg: #cba6f7;    /* Mauve */
-  --torrent-row-sticky-bg: #45475a;
+  --torrent-row-sticky-bg: #282839;  /* Off-palette: Base/Surface0 midpoint */
   --torrent-row-format-fg: #bac2de;
   --torrent-row-format-bg: #313244;
   --torrent-row-seeders-fg: #a6e3a1;    /* Green */
@@ -463,6 +465,46 @@ a.text-bright:hover {
   text-shadow: 1px 1px #11111b;
 }
 
+/* ── Top-nav ratio bar ─────────────────────────────────────── */
+.top-nav__ratio-bar.top-nav__ratio-bar {
+  background: #181825;                                   /* Mantle */
+  border: solid 1px #313244;                             /* Surface0 */
+  box-shadow: 0 4px 14px rgba(17, 17, 27, 0.75),        /* stronger float shadow */
+              0 1px 3px rgba(17, 17, 27, 0.4);
+  border-radius: 5px;
+  padding: 4px 12px;                                     /* breathing room */
+  transform: translateY(4px);                            /* hang over nav edge */
+  position: relative;
+  z-index: 10;                                           /* float above content */
+}
+
+/* ── Top-nav dropdown (compact) ────────────────────────────── */
+.top-nav__dropdown > ul > li > a,
+.top-nav__dropdown > ul > li > form > button {
+  font-size: 15px;
+  padding: 6px 90px 6px 6px;
+  display: grid;
+  grid-template-columns: 30px auto;
+  column-gap: 10px;
+  align-items: center;
+  line-height: 15px;
+  border-radius: 5px;
+  white-space: nowrap;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  cursor: pointer;
+  color: var(--top-nav-dropdown-menu-item-fg);
+  background: var(--top-nav-dropdown-menu-item-bg);
+}
+
+.top-nav__dropdown > ul > li > a:hover,
+.top-nav__dropdown > ul > li > form > button:hover {
+  color: var(--top-nav-dropdown-menu-item-hover-fg);
+  background: var(--top-nav-dropdown-menu-item-hover-bg);
+}
+
 /* ── Footer icon ───────────────────────────────────────────── */
 .footer__icon {
   color: #cba6f7; /* Mauve */
@@ -508,4 +550,320 @@ a.text-bright:hover {
 }
 .sent > div:not(.system):before {
   border-right-color: #313244 !important;
+}
+
+/* ── Torrent action buttons (Catppuccin Mocha) ────────────── */
+.torrent-actions__btn--download {
+  background: #181825;            /* Mantle */
+  color: #a6e3a1 !important;     /* Green */
+  border: 1px solid rgba(166, 227, 161, 0.3);
+}
+
+.torrent-actions__btn--thank {
+  background: #181825;            /* Mantle */
+  color: #f38ba8 !important;     /* Red */
+  border: 1px solid rgba(243, 139, 168, 0.3);
+}
+
+.torrent-actions__btn--secondary {
+  background: #181825;            /* Mantle */
+  color: #bac2de;                 /* Subtext1 */
+  border: 1px solid #313244;      /* Surface0 */
+}
+
+.torrent-actions__btn--secondary:hover {
+  background: #313244;            /* Surface0 */
+  color: #cdd6f4;                 /* Text */
+}
+
+/* ── Torrent badges (Catppuccin Mocha) ────────────────────── */
+.torrent-badges__item {
+  background: #181825;            /* Mantle */
+  border: 1px solid #313244;      /* Surface0 */
+}
+
+/* Badges inside sticky rows need a lighter bg to not clash */
+.torrent-search--list__sticky-row .torrent-badges__item,
+[class*="sticky"] .torrent-badges__item {
+  background: #313244 !important; /* Surface0 */
+  border-color: #45475a;          /* Surface1 */
+}
+
+.torrent-badges__item--seeding {
+  color: #a6e3a1;                 /* Green */
+  border-color: rgba(166, 227, 161, 0.3);
+}
+
+.torrent-badges__item--personal {
+  color: #cba6f7;                 /* Mauve */
+  border-color: rgba(203, 166, 247, 0.3);
+}
+
+.torrent-badges__item--featured {
+  color: #f9e2af;                 /* Yellow */
+  border-color: rgba(249, 226, 175, 0.3);
+}
+
+.torrent-badges__item--sticky {
+  color: #f38ba8;                 /* Red */
+  border-color: rgba(243, 139, 168, 0.3);
+}
+
+.torrent-badges__item--highspeed {
+  color: #fab387;                 /* Peach */
+  border-color: rgba(250, 179, 135, 0.3);
+}
+
+.torrent-badges__item--thanks {
+  color: #f5c2e7;                 /* Pink */
+  border-color: rgba(245, 194, 231, 0.3);
+}
+
+.torrent-badges__item--freeleech {
+  color: #f9e2af;                 /* Yellow */
+  border-color: rgba(249, 226, 175, 0.3);
+}
+
+.torrent-badges__item--double-upload {
+  color: #a6e3a1;                 /* Green */
+  border-color: rgba(166, 227, 161, 0.3);
+}
+
+.torrent-badges__item--comments {
+  color: #89b4fa;                 /* Blue */
+  border-color: rgba(137, 180, 250, 0.3);
+}
+
+/* ── Torrent tools / moderation buttons (Catppuccin Mocha) ── */
+.torrent-tools__btn {
+  background: #313244 !important; /* Surface0 */
+  color: #bac2de;                 /* Subtext1 */
+  border: 1px solid #45475a;      /* Surface1 */
+}
+
+.torrent-tools__btn:hover {
+  background: #45475a !important; /* Surface1 */
+  color: #cdd6f4;                 /* Text */
+}
+
+.torrent-tools__btn--buff {
+  color: #cba6f7;                 /* Mauve */
+  border-color: rgba(203, 166, 247, 0.3);
+}
+
+.torrent-tools__btn--warning {
+  color: #fab387;                 /* Peach */
+  border-color: rgba(250, 179, 135, 0.3);
+}
+
+.torrent-tools__btn--danger,
+.torrent-tools__btn--delete {
+  color: #f38ba8;                 /* Red */
+  border-color: rgba(243, 139, 168, 0.3);
+}
+
+.torrent-tools__status-badge--success {
+  color: #a6e3a1;                 /* Green */
+  background: rgba(166, 227, 161, 0.1);
+  border: 1px solid rgba(166, 227, 161, 0.3);
+}
+
+.torrent-tools__separator {
+  border-color: #313244;          /* Surface0 */
+}
+
+/* ── Trailer button (meta tag) ────────────────────────────── */
+.torrent-meta__tag--trailer {
+  background: #313244 !important; /* Surface0 */
+  color: #89b4fa !important;      /* Blue */
+  border: 1px solid rgba(137, 180, 250, 0.3);
+}
+
+/* ── Search page delete button (match torrent tools) ─────── */
+.torrent-results__delete-btn {
+  background: #313244 !important;     /* Surface0 */
+  color: #f38ba8 !important;          /* Red */
+  border: 1px solid rgba(243, 139, 168, 0.3);
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* ── Torrent section action buttons (match torrent tools) ── */
+.torrent-section__btn--danger {
+  background: #313244 !important;     /* Surface0 */
+  color: #f38ba8 !important;          /* Red */
+  border: 1px solid rgba(243, 139, 168, 0.3);
+}
+
+.torrent-section__btn--warning {
+  background: #313244 !important;     /* Surface0 */
+  color: #fab387 !important;          /* Peach */
+  border: 1px solid rgba(250, 179, 135, 0.3);
+}
+
+/* ── Seeding glow: calm the fuck down on torrent page meta bar ────── */
+.torrent-meta-bar__stat.torrent-activity-indicator--seeding {
+  text-shadow:
+    0 0 0   var(--torrent-row-seeders-fg),
+    0 0 4px var(--torrent-row-seeders-fg),
+    0 0 10px rgba(166, 227, 161, 0.3);
+}
+
+/* ── Torrent moderation action buttons ───────────────────── */
+.data-table__actions .form__button--filled:has(.fa-thumbs-up) {
+  background: #313244 !important;     /* Surface0 */
+  color: #a6e3a1 !important;          /* Green */
+  border: 1px solid rgba(166, 227, 161, 0.3);
+}
+
+.data-table__actions .form__button--filled:has(.fa-pause) {
+  background: #313244 !important;     /* Surface0 */
+  color: #fab387 !important;          /* Peach */
+  border: 1px solid rgba(250, 179, 135, 0.3);
+}
+
+.data-table__actions .form__button--filled:has(.fa-thumbs-down) {
+  background: #313244 !important;     /* Surface0 */
+  color: #f38ba8 !important;          /* Red */
+  border: 1px solid rgba(243, 139, 168, 0.3);
+}
+
+.data-table__actions .form__button--filled:has(.fa-question),
+.data-table__action .form__button--filled:has(.fa-question) {
+  background: #313244 !important;     /* Surface0 */
+  color: #cba6f7 !important;          /* Mauve */
+  border: 1px solid rgba(203, 166, 247, 0.3);
+}
+
+/* ── Torrent moderation action buttons (singular scope) ──── */
+.data-table__action .form__button--filled:has(.fa-pencil) {
+  background: #313244 !important;     /* Surface0 */
+  color: #bac2de !important;          /* Subtext1 */
+  border: 1px solid rgba(186, 194, 222, 0.3);
+}
+
+.data-table__action .form__button--filled:has(.fa-trash-alt) {
+  background: #313244 !important;     /* Surface0 */
+  color: #f38ba8 !important;          /* Red */
+  border: 1px solid rgba(243, 139, 168, 0.3);
+}
+
+/* ── Wiki content subtle background lift ─────────────────── */
+.panel__body.bbcode-rendered {
+  background: #282839;              /* Off-palette: Base/Surface0 midpoint */
+  border-radius: 8px;
+  padding: 20px;
+}
+
+/* ── Wiki sidebar buttons ────────────────────────────────── */
+.sidebar2 .form__button--filled:has(.fa-edit) {
+  background: #313244 !important;     /* Surface0 */
+  color: #bac2de !important;          /* Subtext1 */
+  border: 1px solid rgba(186, 194, 222, 0.3);
+}
+
+.sidebar2 .form__button--filled:has(.fa-trash) {
+  background: #313244 !important;     /* Surface0 */
+  color: #f38ba8 !important;          /* Red */
+  border: 1px solid rgba(243, 139, 168, 0.3);
+}
+
+/* ── Shared action-button hover: Surface1 bg + Text fg ──── */
+.torrent-results__delete-btn:hover,
+.torrent-section__btn--danger:hover,
+.torrent-section__btn--warning:hover,
+.data-table__actions .form__button--filled:hover,
+.data-table__action .form__button--filled:hover,
+.sidebar2 .form__button--filled:hover {
+  background: #45475a !important;     /* Surface1 */
+  color: #cdd6f4 !important;          /* Text */
+}
+
+/* ── Naming validation popover (Catppuccin Mocha) ────────── */
+.naming-validation__issues-panel[popover] {
+  background: #181825 !important;     /* Mantle */
+  border: 1px solid #45475a !important;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(17, 17, 27, 0.6);
+  color: #cdd6f4 !important;
+}
+
+.naming-validation__issues-header {
+  background: transparent !important;
+  border-bottom: 1px solid #313244;
+  color: #cdd6f4;
+}
+
+.naming-validation__issues-header h4 {
+  color: #cdd6f4 !important;
+}
+
+.naming-validation__close-btn {
+  color: #a6adc8 !important;
+}
+.naming-validation__close-btn:hover {
+  color: #cdd6f4 !important;
+}
+
+.naming-validation__issue-item {
+  background: transparent !important;
+  border-bottom: 1px solid #313244;
+}
+
+.naming-validation__issue-content,
+.naming-validation__issue-text {
+  color: #bac2de !important;
+}
+
+.naming-validation__issue-icon {
+  color: #a6adc8 !important;
+}
+
+.naming-validation__issue--format .naming-validation__issue-icon {
+  color: #89b4fa !important;
+}
+
+.naming-validation__issue--naming .naming-validation__issue-icon {
+  color: #f9e2af !important;
+}
+
+.naming-validation__issue--content .naming-validation__issue-icon {
+  color: #fab387 !important;
+}
+
+.naming-validation__issue-suggestion {
+  background: #313244 !important;
+  color: #a6e3a1 !important;
+  border-radius: 4px;
+}
+
+.naming-validation__warning-icon {
+  color: #f9e2af !important;
+}
+
+.naming-validation__issues-summary {
+  background: #313244 !important;
+  border: 1px solid #45475a !important;
+  color: #cdd6f4 !important;
+}
+
+.naming-validation__issue-count {
+  color: #cdd6f4 !important;
+}
+
+.naming-validation__chevron {
+  color: #a6adc8 !important;
+}
+
+.naming-validation__perfect {
+  background: rgba(166, 227, 161, 0.1) !important;
+  border: 1px solid rgba(166, 227, 161, 0.3);
+  border-radius: 8px;
+}
+
+.naming-validation__perfect .text-success {
+  color: #a6e3a1 !important;
 }
