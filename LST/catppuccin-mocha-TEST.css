@@ -678,7 +678,7 @@ a.text-bright:hover {
   color: #f38ba8 !important;          /* Red */
   border: 1px solid rgba(243, 139, 168, 0.3);
   border-radius: 5px;
-  padding: 6px 14px;
+  padding: 8px 16px;
   font-size: 13px;
   cursor: pointer;
   transition: 0.2s;
