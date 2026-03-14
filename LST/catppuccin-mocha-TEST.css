@@ -552,21 +552,21 @@ a.text-bright:hover {
 
 /* ── Torrent action buttons (Catppuccin Mocha) ────────────── */
 .torrent-actions__btn--download {
-  background: #a6e3a1;            /* Green */
-  color: #1e1e2e !important;      /* Base */
-  border: none;
+  background: #181825;            /* Mantle */
+  color: #a6e3a1 !important;     /* Green */
+  border: 1px solid rgba(166, 227, 161, 0.3);
 }
 
 .torrent-actions__btn--thank {
-  background: #f38ba8;            /* Red */
-  color: #1e1e2e !important;
-  border: none;
+  background: #181825;            /* Mantle */
+  color: #f38ba8 !important;     /* Red */
+  border: 1px solid rgba(243, 139, 168, 0.3);
 }
 
 .torrent-actions__btn--secondary {
-  background: transparent;
+  background: #181825;            /* Mantle */
   color: #bac2de;                 /* Subtext1 */
-  border: 1px solid #585b70;      /* Surface2 */
+  border: 1px solid #313244;      /* Surface0 */
 }
 
 .torrent-actions__btn--secondary:hover {
