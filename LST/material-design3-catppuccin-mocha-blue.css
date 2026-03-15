@@ -15,30 +15,30 @@
 
 :root {
     /* ── Message Bubbles ── */
-    --message-bubble-bg: #1e1e2e;
+    --message-bubble-bg: #181825;
     --message-bubble-fg: #cdd6f4;
 
     /* ── Achievements ── */
     --achievement-fg: inherit;
-    --achievement-bg: #1e1e2e;
+    --achievement-bg: #181825;
     --achievement-box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12), 0 3px 3px -2px rgba(0, 0, 0, .4);
     --achievement-progress-bg: #45475a;
 
     /* ── Alerts ── */
-    --alert-bg: #1e1e2e;
+    --alert-bg: #181825;
     --alert-fg: #a6adc8;
     --alert-gap-color: #45475a;
     --alert-gap-width: 1px;
 
     /* ── Article Cards ── */
-    --article-card-bg: #1e1e2e;
+    --article-card-bg: #181825;
     --article-card-fg: #cdd6f4;
     --article-card-head-fg: #bac2de;
     --article-card-time-fg: #a6adc8;
     --article-box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12), 0 3px 3px -2px rgba(0, 0, 0, .4);
 
     /* ── BBCode Input ── */
-    --bbcode-input-header-bg: #313244;
+    --bbcode-input-header-bg: #1e1e2e;
     --bbcode-input-body-bg: #181825;
     --bbcode-input-border: 1px solid #585b70;
     --bbcode-input-border-radius: 22px;
@@ -102,15 +102,15 @@
     --button-text-fg: #cdd6f4;
 
     /* ── Chatbox ── */
-    --chatbox-message-bg: #1e1e2e;
+    --chatbox-message-bg: #181825;
     --chatbox-button-fg: #cdd6f4;
     --chatbox-button-hover-fg: #cdd6f4;
-    --chatbox-users-bg: #313244;
+    --chatbox-users-bg: #181825;
     --chatbox-tab-delete-fg: #f38ba8;
-    --chatbox-tab-delete-bg: #313244;
+    --chatbox-tab-delete-bg: #1e1e2e;
 
     /* ── Collectible Cards ── */
-    --collectible-card-bg: #1e1e2e;
+    --collectible-card-bg: #181825;
     --collectible-card-fg: #bac2de;
     --collectible-card-hover-fg: #cdd6f4;
     --collectible-card-border: none;
@@ -135,7 +135,7 @@
     --data-table-thead-border: 1px solid #45475a;
     --data-table-tr-border: 1px solid #45475a;
     --data-table-tr-even-bg: #181825;
-    --data-table-tr-hover-bg: #313244;
+    --data-table-tr-hover-bg: #1e1e2e;
     --data-table-tr-odd-bg: #181825;
     --data-table-tfoot-border: 3px solid #45475a;
 
@@ -206,7 +206,7 @@
     --legend-border-radius: 0;
 
     /* ── Media Hub Cards ── */
-    --mediahub-card-bg: #1e1e2e;
+    --mediahub-card-bg: #181825;
     --mediahub-card-fg: #bac2de;
     --mediahub-card-hover-fg: #cdd6f4;
     --mediahub-card-border: none;
@@ -235,25 +235,25 @@
     --meta-chip-value-hover-fg: #cdd6f4;
     --meta-chip-backdrop-filter-hover: brightness(2) blur(10px);
     --meta-chip-hover-bg: rgba(205, 214, 244, .1);
-    --meta-popup-bg: #1e1e2e;
+    --meta-popup-bg: #181825;
     --meta-popup-fg: #7f849c;
 
     /* ── Meter ── */
     --meter-fg: #89b4fa;
-    --meter-bg: #1e1e2e;
+    --meter-bg: #181825;
 
     /* ── Notifications ── */
     --notification-read: transparent;
     --notification-unread: #a6e3a1;
 
     /* ── Options ── */
-    --option-bg: #1e1e2e;
+    --option-bg: #181825;
     --option-fg: #cdd6f4;
 
     /* ── Pagination ── */
     --paginate-bg: #181825;
-    --paginate-bg-hover: #313244;
-    --paginate-bg-current: #313244;
+    --paginate-bg-hover: #1e1e2e;
+    --paginate-bg-current: #1e1e2e;
     --paginate-border-radius: 22px;
     --paginate-fg: #bac2de;
     --paginate-fg-disabled: #6c7086;
@@ -272,32 +272,32 @@
     --panel-head-border-radius: 22px;
 
     /* ── Playlist Cards ── */
-    --playlist-card-bg: #1e1e2e;
+    --playlist-card-bg: #181825;
     --playlist-card-border: none;
     --playlist-card-border-radius: 20px;
     --playlist-card-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2);
     --playlist-card-fg: #bac2de;
-    --playlist-card-missing-image-bg: #313244;
-    --playlist-card-missing-image-fg: #181825;
+    --playlist-card-missing-image-bg: #1e1e2e;
+    --playlist-card-missing-image-fg: #11111b;
 
     /* ── Posts ── */
-    --post-bg: #1e1e2e;
+    --post-bg: #181825;
     --post-fg: #cdd6f4;
     --post-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .12), 0 1px 8px 0 rgba(0, 0, 0, .2);
     --post-head-fg: var(--panel-fg);
     --post-head-bg: none;
-    --post-toolbar-bg: #1e1e2e;
+    --post-toolbar-bg: #181825;
     --post-toolbar-fg: #a6adc8;
-    --post-toolbar-hover-bg: #1e1e2e;
+    --post-toolbar-hover-bg: #181825;
     --post-toolbar-hover-fg: #89b4fa;
     --post-like-fg: #a6e3a1;
     --post-dislike-fg: #f38ba8;
-    --post-aside-bg: #1e1e2e;
+    --post-aside-bg: #181825;
     --post-aside-fg: #6c7086;
     --post-footer-fg: var(--panel-fg);
 
     /* ── Prizes ── */
-    --prize-bg: #1e1e2e;
+    --prize-bg: #181825;
     --prize-border-radius: 20px;
     --prize-border: none;
     --prize-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2);
@@ -307,19 +307,19 @@
     --prize-icon-secondary-color: #f5e0dc;
 
     /* ── Quick Search ── */
-    --quick-search-bg: #1e1e2e;
+    --quick-search-bg: #181825;
     --quick-search-fg: #cdd6f4;
     --quick-search-border: none;
     --quick-search-border-radius: 18px;
     --quick-search-box-shadow: 0 4px 6px rgba(17, 17, 27, .28);
     --quick-search-selector-fg: #cdd6f4;
-    --quick-search-selector-hover-bg: #313244;
+    --quick-search-selector-hover-bg: #1e1e2e;
     --quick-search-selector-hover-fg: #cdd6f4;
-    --quick-search-selector-selected-bg: #1e1e2e;
+    --quick-search-selector-selected-bg: #181825;
     --quick-search-selector-selected-fg: #cdd6f4;
-    --quick-search-result-bg: #1e1e2e;
+    --quick-search-result-bg: #181825;
     --quick-search-result-fg: #cdd6f4;
-    --quick-search-result-hover-bg: #313244;
+    --quick-search-result-hover-bg: #1e1e2e;
     --quick-search-result-hover-fg: #cdd6f4;
     --quick-search-result-image-border-radius: 5px;
     --quick-search-result-year-fg: #cdd6f4;
@@ -399,17 +399,17 @@
     --top-nav-toggle-fg: #bac2de;
 
     /* ── Torrent Cards ── */
-    --torrent-card-bg: #1e1e2e;
+    --torrent-card-bg: #181825;
     --torrent-card-fg: #cdd6f4;
     --torrent-card-border: none;
-    --torrent-card-head-bg: #1e1e2e;
+    --torrent-card-head-bg: #181825;
     --torrent-card-head-fg: #cdd6f4;
     --torrent-card-link-fg: #cdd6f4;
     --torrent-card-genre-fg: #cdd6f4;
 
     /* ── Torrent Groups ── */
-    --torrent-group-bg: #1e1e2e;
-    --torrent-group-header-bg: #1e1e2e;
+    --torrent-group-bg: #181825;
+    --torrent-group-header-bg: #181825;
     --torrent-group-text: #cdd6f4;
     --torrent-group-text-muted: #a6adc8;
     --torrent-group-table-stripe-even: rgba(0, 0, 0, .18);
@@ -444,7 +444,7 @@
     --torrent-tag-hover-bg: rgba(205, 214, 244, .1);
 
     /* ── User Stat Cards ── */
-    --user-stat-card-bg: #1e1e2e;
+    --user-stat-card-bg: #181825;
     --user-stat-card-fg: #bac2de;
     --user-stat-card-border: none;
     --user-stat-card-border-radius: 22px;
@@ -454,9 +454,9 @@
     --bet-foreground: #cdd6f4;
     --bet-foreground-alt: #cdd6f4;
     --bet-bg: #181825;
-    --bet-bg-alt: #1e1e2e;
-    --bet-bg-item: #313244;
-    --bet-bg-active: #313244;
+    --bet-bg-alt: #181825;
+    --bet-bg-item: #1e1e2e;
+    --bet-bg-active: #1e1e2e;
     --bet-muted: #7f849c;
     --bet-muted-weak: #a6adc8;
     --bet-link-hover: #89b4fa;
@@ -781,45 +781,45 @@ a.text-bright:hover {
 }
 #frame .content .message-input .wrap input {
     color: #cdd6f4;
-    background: #313244;
+    background: #1e1e2e;
 }
 #frame .content .message-input .wrap .attachment {
     color: #a6adc8;
 }
 #frame .content .message-input .wrap button {
-    background: #45475a;
+    background: #1e1e2e;
     color: #cdd6f4;
 }
 #frame .content .message-input .wrap button:hover {
-    background: #585b70;
+    background: #313244;
 }
 
 /* ── Sent message bubble overrides ─────────────────────────── */
 .sent > h4 {
-    background-color: #1e1e2e !important;
+    background-color: #181825 !important;
 }
 .sent > div {
-    background-color: #1e1e2e !important;
+    background-color: #181825 !important;
 }
 .sent > div:not(.system):before {
-    border-right-color: #1e1e2e !important;
+    border-right-color: #181825 !important;
 }
 
 /* ── Torrent action buttons (Catppuccin Mocha) ────────────── */
 .torrent-actions__btn--download {
-    background: #181825;            /* Mantle */
+    background: #1e1e2e;            /* Base — lifted above Mantle panels */
     color: #a6e3a1 !important;     /* Green */
     border: 1px solid rgba(166, 227, 161, 0.3);
 }
 
 .torrent-actions__btn--thank {
-    background: #181825;            /* Mantle */
+    background: #1e1e2e;            /* Base — lifted above Mantle panels */
     color: #f38ba8 !important;     /* Red */
     border: 1px solid rgba(243, 139, 168, 0.3);
 }
 
 .torrent-actions__btn--secondary {
-    background: #181825;            /* Mantle */
+    background: #1e1e2e;            /* Base — lifted above Mantle panels */
     color: #bac2de;                 /* Subtext1 */
     border: 1px solid #313244;      /* Surface0 */
 }
@@ -831,7 +831,7 @@ a.text-bright:hover {
 
 /* ── Torrent badges (Catppuccin Mocha) ────────────────────── */
 .torrent-badges__item {
-    background: #181825;            /* Mantle */
+    background: #1e1e2e;            /* Base — lifted above Mantle cards */
     border: 1px solid #313244;      /* Surface0 */
 }
 
@@ -1006,7 +1006,7 @@ a.text-bright:hover {
 
 /* ── Wiki content subtle background lift ─────────────────── */
 .panel__body.bbcode-rendered {
-    background: #1e1e2e;              /* Base — one tier above Mantle panels */
+    background: #181825;              /* Mantle — flush with panels, shadow provides elevation */
     border-radius: 22px;
     padding: 20px;
 }
