@@ -911,19 +911,23 @@ a.text-bright:hover {
 
 /* ── Upload page: file inputs ─────────────────────────────── */
 .upload-form-file.form__file {
-  background: #313244;            /* Surface0 */
+  background: transparent;
   color: #cdd6f4;                 /* Text */
-  border: 1px solid #45475a;      /* Surface1 */
+  border: none;
 }
 
 .upload-form-file.form__file::file-selector-button {
-  background: #45475a;            /* Surface1 */
-  color: #cdd6f4;                 /* Text */
-  border: none;
-  border-right: 1px solid #585b70; /* Surface2 */
+  background: #313244;            /* Surface0 */
+  color: #bac2de;                 /* Subtext1 */
+  border: 1px solid #585b70;      /* Surface2 */
+  border-radius: 5px;
+  padding: 6px 14px;
+  margin-right: 10px;
   cursor: pointer;
+  transition: 0.2s;
 }
 
 .upload-form-file.form__file::file-selector-button:hover {
-  background: #585b70;            /* Surface2 */
+  background: #45475a;            /* Surface1 */
+  color: #cdd6f4;                 /* Text */
 }
