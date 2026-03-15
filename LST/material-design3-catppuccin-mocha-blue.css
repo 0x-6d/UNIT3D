@@ -15,30 +15,30 @@
 
 :root {
     /* ── Message Bubbles ── */
-    --message-bubble-bg: #313244;
+    --message-bubble-bg: #1e1e2e;
     --message-bubble-fg: #cdd6f4;
 
     /* ── Achievements ── */
     --achievement-fg: inherit;
-    --achievement-bg: #313244;
+    --achievement-bg: #1e1e2e;
     --achievement-box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12), 0 3px 3px -2px rgba(0, 0, 0, .4);
     --achievement-progress-bg: #45475a;
 
     /* ── Alerts ── */
-    --alert-bg: #313244;
+    --alert-bg: #1e1e2e;
     --alert-fg: #a6adc8;
     --alert-gap-color: #45475a;
     --alert-gap-width: 1px;
 
     /* ── Article Cards ── */
-    --article-card-bg: #313244;
+    --article-card-bg: #1e1e2e;
     --article-card-fg: #cdd6f4;
     --article-card-head-fg: #bac2de;
     --article-card-time-fg: #a6adc8;
     --article-box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12), 0 3px 3px -2px rgba(0, 0, 0, .4);
 
     /* ── BBCode Input ── */
-    --bbcode-input-header-bg: #45475a;
+    --bbcode-input-header-bg: #313244;
     --bbcode-input-body-bg: #181825;
     --bbcode-input-border: 1px solid #585b70;
     --bbcode-input-border-radius: 22px;
@@ -52,16 +52,16 @@
     --bbcode-rendered-canvas-subtle: #313244;
     --bbcode-rendered-border-default: #45475a;
     --bbcode-rendered-border-muted: #585b70;
-    --bbcode-rendered-neutral-muted: #181825;
+    --bbcode-rendered-neutral-muted: #11111b;
     --bbcode-rendered-accent-fg: #89b4fa;
     --bbcode-rendered-accent-emphasis: #89b4fa;
     --bbcode-rendered-attention-subtle: #b4befe;
     --bbcode-rendered-danger-fg: #f38ba8;
-    --bbcode-rendered-quote-bg: #181825;
+    --bbcode-rendered-quote-bg: #11111b;
     --bbcode-rendered-quote-border: #89b4fa;
 
     /* ── Body ── */
-    --body-bg: #1e1e2e;
+    --body-bg: #11111b;
     --body-fg: #cdd6f4;
     --text-primary: var(--body-fg);
     --panel-bg-secondary: var(--dialog-head-bg, var(--panel-bg));
@@ -102,15 +102,15 @@
     --button-text-fg: #cdd6f4;
 
     /* ── Chatbox ── */
-    --chatbox-message-bg: #313244;
+    --chatbox-message-bg: #1e1e2e;
     --chatbox-button-fg: #cdd6f4;
     --chatbox-button-hover-fg: #cdd6f4;
-    --chatbox-users-bg: #45475a;
+    --chatbox-users-bg: #313244;
     --chatbox-tab-delete-fg: #f38ba8;
-    --chatbox-tab-delete-bg: #45475a;
+    --chatbox-tab-delete-bg: #313244;
 
     /* ── Collectible Cards ── */
-    --collectible-card-bg: #313244;
+    --collectible-card-bg: #1e1e2e;
     --collectible-card-fg: #bac2de;
     --collectible-card-hover-fg: #cdd6f4;
     --collectible-card-border: none;
@@ -162,7 +162,7 @@
     --fieldset-border: 1px solid #585b70;
 
     /* ── Footer ── */
-    --footer-bg: #11111b26;
+    --footer-bg: rgba(0, 0, 0, 0.15);
     --footer-hr-fg: #45475a;
 
     /* ── Icon Buttons ── */
@@ -206,7 +206,7 @@
     --legend-border-radius: 0;
 
     /* ── Media Hub Cards ── */
-    --mediahub-card-bg: #313244;
+    --mediahub-card-bg: #1e1e2e;
     --mediahub-card-fg: #bac2de;
     --mediahub-card-hover-fg: #cdd6f4;
     --mediahub-card-border: none;
@@ -235,19 +235,19 @@
     --meta-chip-value-hover-fg: #cdd6f4;
     --meta-chip-backdrop-filter-hover: brightness(2) blur(10px);
     --meta-chip-hover-bg: rgba(205, 214, 244, .1);
-    --meta-popup-bg: #313244;
+    --meta-popup-bg: #1e1e2e;
     --meta-popup-fg: #7f849c;
 
     /* ── Meter ── */
     --meter-fg: #89b4fa;
-    --meter-bg: #313244;
+    --meter-bg: #1e1e2e;
 
     /* ── Notifications ── */
     --notification-read: transparent;
     --notification-unread: #a6e3a1;
 
     /* ── Options ── */
-    --option-bg: #313244;
+    --option-bg: #1e1e2e;
     --option-fg: #cdd6f4;
 
     /* ── Pagination ── */
@@ -257,7 +257,7 @@
     --paginate-border-radius: 22px;
     --paginate-fg: #bac2de;
     --paginate-fg-disabled: #6c7086;
-    --paginate-divider: #1e1e2e;
+    --paginate-divider: #11111b;
 
     /* ── Panels ── */
     --panel-action-fg: #cdd6f4;
@@ -272,32 +272,32 @@
     --panel-head-border-radius: 22px;
 
     /* ── Playlist Cards ── */
-    --playlist-card-bg: #313244;
+    --playlist-card-bg: #1e1e2e;
     --playlist-card-border: none;
     --playlist-card-border-radius: 20px;
     --playlist-card-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2);
     --playlist-card-fg: #bac2de;
-    --playlist-card-missing-image-bg: #45475a;
-    --playlist-card-missing-image-fg: #313244;
+    --playlist-card-missing-image-bg: #313244;
+    --playlist-card-missing-image-fg: #181825;
 
     /* ── Posts ── */
-    --post-bg: #313244;
+    --post-bg: #1e1e2e;
     --post-fg: #cdd6f4;
     --post-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .12), 0 1px 8px 0 rgba(0, 0, 0, .2);
     --post-head-fg: var(--panel-fg);
     --post-head-bg: none;
-    --post-toolbar-bg: #313244;
+    --post-toolbar-bg: #1e1e2e;
     --post-toolbar-fg: #a6adc8;
-    --post-toolbar-hover-bg: #313244;
+    --post-toolbar-hover-bg: #1e1e2e;
     --post-toolbar-hover-fg: #89b4fa;
     --post-like-fg: #a6e3a1;
     --post-dislike-fg: #f38ba8;
-    --post-aside-bg: #313244;
+    --post-aside-bg: #1e1e2e;
     --post-aside-fg: #6c7086;
     --post-footer-fg: var(--panel-fg);
 
     /* ── Prizes ── */
-    --prize-bg: #313244;
+    --prize-bg: #1e1e2e;
     --prize-border-radius: 20px;
     --prize-border: none;
     --prize-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2);
@@ -307,19 +307,19 @@
     --prize-icon-secondary-color: #f5e0dc;
 
     /* ── Quick Search ── */
-    --quick-search-bg: #313244;
+    --quick-search-bg: #1e1e2e;
     --quick-search-fg: #cdd6f4;
     --quick-search-border: none;
     --quick-search-border-radius: 18px;
     --quick-search-box-shadow: 0 4px 6px rgba(17, 17, 27, .28);
     --quick-search-selector-fg: #cdd6f4;
-    --quick-search-selector-hover-bg: #45475a;
+    --quick-search-selector-hover-bg: #313244;
     --quick-search-selector-hover-fg: #cdd6f4;
-    --quick-search-selector-selected-bg: #313244;
+    --quick-search-selector-selected-bg: #1e1e2e;
     --quick-search-selector-selected-fg: #cdd6f4;
-    --quick-search-result-bg: #313244;
+    --quick-search-result-bg: #1e1e2e;
     --quick-search-result-fg: #cdd6f4;
-    --quick-search-result-hover-bg: #45475a;
+    --quick-search-result-hover-bg: #313244;
     --quick-search-result-hover-fg: #cdd6f4;
     --quick-search-result-image-border-radius: 5px;
     --quick-search-result-year-fg: #cdd6f4;
@@ -399,17 +399,17 @@
     --top-nav-toggle-fg: #bac2de;
 
     /* ── Torrent Cards ── */
-    --torrent-card-bg: #313244;
+    --torrent-card-bg: #1e1e2e;
     --torrent-card-fg: #cdd6f4;
     --torrent-card-border: none;
-    --torrent-card-head-bg: #313244;
+    --torrent-card-head-bg: #1e1e2e;
     --torrent-card-head-fg: #cdd6f4;
     --torrent-card-link-fg: #cdd6f4;
     --torrent-card-genre-fg: #cdd6f4;
 
     /* ── Torrent Groups ── */
-    --torrent-group-bg: #313244;
-    --torrent-group-header-bg: #313244;
+    --torrent-group-bg: #1e1e2e;
+    --torrent-group-header-bg: #1e1e2e;
     --torrent-group-text: #cdd6f4;
     --torrent-group-text-muted: #a6adc8;
     --torrent-group-table-stripe-even: rgba(0, 0, 0, .18);
@@ -420,10 +420,10 @@
     /* ── Torrent Rows ── */
     --torrent-row-fg: #bac2de;
     --torrent-row-visited-fg: #cba6f7;
-    --torrent-row-sticky-bg: #45475a;
+    --torrent-row-sticky-bg: #313244;
     --torrent-row-format-fg: #bac2de;
     --torrent-row-format-bg: transparent;
-    --torrent-row-buttons-fg: #1e1e2e;
+    --torrent-row-buttons-fg: #11111b;
     --torrent-row-seeders-fg: #a6e3a1;
     --torrent-row-leechers-fg: #f38ba8;
     --torrent-row-completed-fg: #89b4fa;
@@ -444,7 +444,7 @@
     --torrent-tag-hover-bg: rgba(205, 214, 244, .1);
 
     /* ── User Stat Cards ── */
-    --user-stat-card-bg: #313244;
+    --user-stat-card-bg: #1e1e2e;
     --user-stat-card-fg: #bac2de;
     --user-stat-card-border: none;
     --user-stat-card-border-radius: 22px;
@@ -454,9 +454,9 @@
     --bet-foreground: #cdd6f4;
     --bet-foreground-alt: #cdd6f4;
     --bet-bg: #181825;
-    --bet-bg-alt: #313244;
-    --bet-bg-item: #45475a;
-    --bet-bg-active: #45475a;
+    --bet-bg-alt: #1e1e2e;
+    --bet-bg-item: #313244;
+    --bet-bg-active: #313244;
     --bet-muted: #7f849c;
     --bet-muted-weak: #a6adc8;
     --bet-link-hover: #89b4fa;
@@ -765,7 +765,7 @@ a.text-bright:hover {
 
 /* ── Chatbox frame overrides ───────────────────────────────── */
 #frame {
-    background: #1e1e2e;
+    background: #11111b;
 }
 #frame .content .messages ul li {
     border-bottom: 1px dashed #45475a;
@@ -796,13 +796,13 @@ a.text-bright:hover {
 
 /* ── Sent message bubble overrides ─────────────────────────── */
 .sent > h4 {
-    background-color: #313244 !important;
+    background-color: #1e1e2e !important;
 }
 .sent > div {
-    background-color: #313244 !important;
+    background-color: #1e1e2e !important;
 }
 .sent > div:not(.system):before {
-    border-right-color: #313244 !important;
+    border-right-color: #1e1e2e !important;
 }
 
 /* ── Torrent action buttons (Catppuccin Mocha) ────────────── */
@@ -838,8 +838,8 @@ a.text-bright:hover {
 /* Badges inside sticky rows need a lighter bg to not clash */
 .torrent-search--list__sticky-row .torrent-badges__item,
 [class*="sticky"] .torrent-badges__item {
-    background: #313244 !important; /* Surface0 */
-    border-color: #45475a;          /* Surface1 */
+    background: #1e1e2e !important; /* Base */
+    border-color: #313244;          /* Surface0 */
 }
 
 .torrent-badges__item--seeding {
@@ -1006,7 +1006,7 @@ a.text-bright:hover {
 
 /* ── Wiki content subtle background lift ─────────────────── */
 .panel__body.bbcode-rendered {
-    background: #282839;              /* Off-palette: Base/Surface0 midpoint */
+    background: #1e1e2e;              /* Base — one tier above Mantle panels */
     border-radius: 22px;
     padding: 20px;
 }
