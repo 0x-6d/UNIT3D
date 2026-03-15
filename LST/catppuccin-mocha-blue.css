@@ -418,12 +418,6 @@
   --bet-danger: #f38ba8;               /* Red */
 }
 
-/* ── Body background pattern ──────────────────────────────── */
-body {
-  background: #1e1e2e
-    url('https://raw.githubusercontent.com/0x-6d/UNIT3D/e75f4ee7e4b3961915b82a78752cc7b84990fcd0/Assets/body_bg.svg');
-}
-
 /* ── Links ─────────────────────────────────────────────────── */
 a {
   color: #89b4fa; /* Blue */
