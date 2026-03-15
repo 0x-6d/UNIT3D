@@ -418,9 +418,18 @@
   --bet-danger: #f38ba8;               /* Red */
 }
 
+/* ── Body background pattern ──────────────────────────────── */
+body {
+  background: #1e1e2e
+    url('https://raw.githubusercontent.com/0x-6d/UNIT3D/e75f4ee7e4b3961915b82a78752cc7b84990fcd0/Assets/body_bg.svg');
+}
+
 /* ── Links ─────────────────────────────────────────────────── */
 a {
   color: #89b4fa; /* Blue */
+}
+a:visited {
+  color: #cba6f7; /* Mauve — matches --torrent-row-visited-fg */
 }
 a:hover {
   color: #b4befe; /* Lavender */
@@ -866,4 +875,58 @@ a.text-bright:hover {
 
 .naming-validation__perfect .text-success {
   color: #a6e3a1 !important;
+}
+
+/* ── Upload page: section icons ───────────────────────────── */
+.torrent-upload-section__icon {
+  color: #89b4fa;                 /* Blue */
+}
+
+.torrent-upload-section__toggle {
+  color: #a6adc8;                 /* Subtext0 */
+}
+
+.torrent-upload-section__header:hover .torrent-upload-section__toggle {
+  color: #cdd6f4;                 /* Text */
+}
+
+/* ── Upload page: action buttons ──────────────────────────── */
+.torrent-upload-actions__btn--primary {
+  background: #89b4fa !important; /* Blue */
+  color: #1e1e2e !important;      /* Base */
+  border: none;
+}
+
+.torrent-upload-actions__btn--primary:hover {
+  background: #b4befe !important; /* Lavender */
+}
+
+.torrent-upload-actions__btn--secondary {
+  background: #313244 !important; /* Surface0 */
+  color: #bac2de !important;      /* Subtext1 */
+  border: 1px solid #45475a;      /* Surface1 */
+}
+
+.torrent-upload-actions__btn--secondary:hover {
+  background: #45475a !important; /* Surface1 */
+  color: #cdd6f4 !important;      /* Text */
+}
+
+/* ── Upload page: file inputs ─────────────────────────────── */
+.upload-form-file.form__file {
+  background: #313244;            /* Surface0 */
+  color: #cdd6f4;                 /* Text */
+  border: 1px solid #45475a;      /* Surface1 */
+}
+
+.upload-form-file.form__file::file-selector-button {
+  background: #45475a;            /* Surface1 */
+  color: #cdd6f4;                 /* Text */
+  border: none;
+  border-right: 1px solid #585b70; /* Surface2 */
+  cursor: pointer;
+}
+
+.upload-form-file.form__file::file-selector-button:hover {
+  background: #585b70;            /* Surface2 */
 }
