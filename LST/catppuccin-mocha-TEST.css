@@ -591,8 +591,9 @@ a.text-bright:hover {
   border: 1px solid #313244;      /* Surface0 */
 }
 
-/* Badges inside sticky rows: match the row bg so they blend in */
-.torrent-search--list__sticky-row .torrent-badges__item {
+/* Badges inside sticky/highlighted rows: match the row bg so they blend in */
+.torrent-search--list__sticky-row .torrent-badges__item,
+[class*="sticky"] .torrent-badges__item {
   background: #282839 !important; /* Same as --torrent-row-sticky-bg */
   border-color: #313244;          /* Surface0 */
 }
