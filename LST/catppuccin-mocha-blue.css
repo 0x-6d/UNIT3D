@@ -61,13 +61,16 @@
   --ui-danger-fg: #f38ba8;            /* Red */
   --ui-danger-fg-weak: #eba0ac;       /* Maroon */
 
+  /* ── Shared shadow base (Crust) ──────────────────────── */
+  --shadow-color: 17, 17, 27;        /* Crust RGB — use with rgba() */
+
   /* ── Scrollbar ─────────────────────────────────────────── */
   --scrollbar-color: rgba(147, 153, 178, 0.15); /* Overlay2 faded */
 
   /* ── Message bubbles ───────────────────────────────────── */
   --message-bubble-bg: #313244;       /* Surface0 */
   --message-bubble-fg: currentColor;
-  --message-bubble-box-shadow: 0 1px 2px rgba(17, 17, 27, 0.4);
+  --message-bubble-box-shadow: 0 1px 2px rgba(var(--shadow-color), 0.4);
 
   /* ── Panels ────────────────────────────────────────────── */
   --panel-bg: #1e1e2e;                /* Base */
@@ -89,14 +92,14 @@
 
   /* ── Top nav ───────────────────────────────────────────── */
   --top-nav-bg: #181825;              /* Mantle */
-  --top-nav-box-shadow: 0 2px 8px rgba(17, 17, 27, 0.5);
+  --top-nav-box-shadow: 0 2px 8px rgba(var(--shadow-color), 0.5);
   --top-nav-dropdown-fg: #bac2de;
   --top-nav-dropdown-hover-fg: #cdd6f4;
   --top-nav-dropdown-hover-bg: #313244;
   --top-nav-dropdown-menu-bg: #1e1e2e;
   --top-nav-dropdown-menu-border: 1px solid #45475a;
   --top-nav-dropdown-menu-border-radius: 8px;
-  --top-nav-dropdown-menu-box-shadow: 0 8px 24px rgba(17, 17, 27, 0.6);
+  --top-nav-dropdown-menu-box-shadow: 0 8px 24px rgba(var(--shadow-color), 0.6);
   --top-nav-dropdown-menu-item-fg: #bac2de;
   --top-nav-dropdown-menu-item-bg: transparent;
   --top-nav-dropdown-menu-item-hover-fg: #cdd6f4;
@@ -113,7 +116,7 @@
 
   /* ── Secondary nav ─────────────────────────────────────── */
   --secondary-nav-bg: #181825;
-  --secondary-nav-box-shadow: 0 4px 10px rgba(17, 17, 27, 0.4);
+  --secondary-nav-box-shadow: 0 4px 10px rgba(var(--shadow-color), 0.4);
   --secondary-nav-tab-fg: #a6adc8;
   --secondary-nav-tab-bg: inherit;
   --secondary-nav-tab-active-text-decoration: underline #89b4fa 2px;
@@ -122,7 +125,7 @@
   --secondary-nav-tab-menu-bg: #313244;
   --secondary-nav-tab-menu-border: 1px solid #45475a;
   --secondary-nav-tab-menu-border-radius: 8px;
-  --secondary-nav-tab-menu-box-shadow: 0 8px 24px rgba(17, 17, 27, 0.6);
+  --secondary-nav-tab-menu-box-shadow: 0 8px 24px rgba(var(--shadow-color), 0.6);
 
   /* ── Breadcrumbs ───────────────────────────────────────── */
   --breadcrumb-fg: #6c7086;           /* Overlay0 */
@@ -200,7 +203,7 @@
   --article-card-fg: #bac2de;
   --article-card-head-fg: #cdd6f4;
   --article-card-time-fg: #a6adc8;
-  --article-box-shadow: 0 2px 8px rgba(17, 17, 27, 0.4);
+  --article-box-shadow: 0 2px 8px rgba(var(--shadow-color), 0.4);
 
   /* ── BBCode ────────────────────────────────────────────── */
   --bbcode-input-header-bg: #181825;
@@ -240,7 +243,7 @@
 
   /* ── Donation ──────────────────────────────────────────── */
   --donation-border-color: #45475a;
-  --donation-box-shadow-color: rgba(17, 17, 27, 0.4);
+  --donation-box-shadow-color: rgba(var(--shadow-color), 0.4);
   --donation-primary-text-color: #cdd6f4;
   --donation-secondary-text-color: #a6adc8;
   --donation-background-color: #181825;
@@ -303,7 +306,7 @@
   --playlist-card-bg: #181825;
   --playlist-card-fg: #bac2de;
   --playlist-card-border: 1px solid #313244;
-  --playlist-card-box-shadow: 0 4px 12px rgba(17, 17, 27, 0.5);
+  --playlist-card-box-shadow: 0 4px 12px rgba(var(--shadow-color), 0.5);
   --playlist-card-missing-image-bg: #313244;
   --playlist-card-missing-image-fg: #a6adc8;
 
@@ -312,7 +315,7 @@
   --prize-fg: #bac2de;
   --prize-heading-fg: #cdd6f4;
   --prize-border: 1px solid #313244;
-  --prize-box-shadow: 0 4px 12px rgba(17, 17, 27, 0.5);
+  --prize-box-shadow: 0 4px 12px rgba(var(--shadow-color), 0.5);
   --prize-icon-primary-color: #a6e3a1;  /* Green */
   --prize-icon-secondary-color: #f5e0dc; /* Rosewater */
 
@@ -334,7 +337,7 @@
   --quick-search-fg: #bac2de;
   --quick-search-border: 1px solid #45475a;
   --quick-search-border-radius: 16px;
-  --quick-search-box-shadow: 0 4px 12px rgba(17, 17, 27, 0.5);
+  --quick-search-box-shadow: 0 4px 12px rgba(var(--shadow-color), 0.5);
   --quick-search-selector-fg: #a6adc8;
   --quick-search-selector-hover-bg: #45475a;
   --quick-search-selector-hover-fg: #cdd6f4;
@@ -462,7 +465,7 @@ a.text-bright:hover {
   color: #f5c2e7;
 }
 .text-danger {
-  color: #f38ba8;
+  color: #f38ba8; /* Same as .text-red — both map to Mocha Red */
 }
 
 /* ── Badges ────────────────────────────────────────────────── */
@@ -475,8 +478,8 @@ a.text-bright:hover {
 .top-nav__ratio-bar.top-nav__ratio-bar {
   background: #181825;                                   /* Mantle */
   border: solid 1px #313244;                             /* Surface0 */
-  box-shadow: 0 4px 14px rgba(17, 17, 27, 0.75),        /* stronger float shadow */
-              0 1px 3px rgba(17, 17, 27, 0.4);
+  box-shadow: 0 4px 14px rgba(var(--shadow-color), 0.75),        /* stronger float shadow */
+              0 1px 3px rgba(var(--shadow-color), 0.4);
   border-radius: 5px;
   padding: 4px 12px;                                     /* breathing room */
   transform: translateY(4px);                            /* hang over nav edge */
@@ -589,8 +592,7 @@ a.text-bright:hover {
 }
 
 /* Badges inside sticky rows need a lighter bg to not clash */
-.torrent-search--list__sticky-row .torrent-badges__item,
-[class*="sticky"] .torrent-badges__item {
+.torrent-search--list__sticky-row .torrent-badges__item {
   background: #313244 !important; /* Surface0 */
   border-color: #45475a;          /* Surface1 */
 }
@@ -685,58 +687,37 @@ a.text-bright:hover {
   border: 1px solid rgba(137, 180, 250, 0.3);
 }
 
-/* ── Search page delete button (match torrent tools) ─────── */
-.torrent-results__delete-btn {
-  background: #313244 !important;     /* Surface0 */
-  color: #f38ba8 !important;          /* Red */
-  border: 1px solid rgba(243, 139, 168, 0.3);
-  border-radius: 5px;
-  padding: 8px 16px;
-  font-size: 13px;
-  cursor: pointer;
-  transition: 0.2s;
-}
+/* ── Action buttons: shared Surface0 base ─────────────────── */
+/*   All action/moderation buttons share the same bg pattern;  */
+/*   color and border-color vary by semantic role below.       */
 
-/* ── Torrent section action buttons (match torrent tools) ── */
-.torrent-section__btn--danger {
+/* Red — danger / delete / reject */
+.torrent-results__delete-btn,
+.torrent-section__btn--danger,
+.data-table__actions .form__button--filled:has(.fa-thumbs-down),
+.data-table__action .form__button--filled:has(.fa-trash-alt),
+.sidebar2 .form__button--filled:has(.fa-trash) {
   background: #313244 !important;     /* Surface0 */
   color: #f38ba8 !important;          /* Red */
   border: 1px solid rgba(243, 139, 168, 0.3);
 }
 
-.torrent-section__btn--warning {
-  background: #313244 !important;     /* Surface0 */
-  color: #fab387 !important;          /* Peach */
-  border: 1px solid rgba(250, 179, 135, 0.3);
-}
-
-/* ── Seeding glow: calm the fuck down on torrent page meta bar ────── */
-.torrent-meta-bar__stat.torrent-activity-indicator--seeding {
-  text-shadow:
-    0 0 0   var(--torrent-row-seeders-fg),
-    0 0 4px var(--torrent-row-seeders-fg),
-    0 0 10px rgba(166, 227, 161, 0.3);
-}
-
-/* ── Torrent moderation action buttons ───────────────────── */
-.data-table__actions .form__button--filled:has(.fa-thumbs-up) {
-  background: #313244 !important;     /* Surface0 */
-  color: #a6e3a1 !important;          /* Green */
-  border: 1px solid rgba(166, 227, 161, 0.3);
-}
-
+/* Peach — warning / pause */
+.torrent-section__btn--warning,
 .data-table__actions .form__button--filled:has(.fa-pause) {
   background: #313244 !important;     /* Surface0 */
   color: #fab387 !important;          /* Peach */
   border: 1px solid rgba(250, 179, 135, 0.3);
 }
 
-.data-table__actions .form__button--filled:has(.fa-thumbs-down) {
+/* Green — approve */
+.data-table__actions .form__button--filled:has(.fa-thumbs-up) {
   background: #313244 !important;     /* Surface0 */
-  color: #f38ba8 !important;          /* Red */
-  border: 1px solid rgba(243, 139, 168, 0.3);
+  color: #a6e3a1 !important;          /* Green */
+  border: 1px solid rgba(166, 227, 161, 0.3);
 }
 
+/* Mauve — unknown / question */
 .data-table__actions .form__button--filled:has(.fa-question),
 .data-table__action .form__button--filled:has(.fa-question) {
   background: #313244 !important;     /* Surface0 */
@@ -744,17 +725,28 @@ a.text-bright:hover {
   border: 1px solid rgba(203, 166, 247, 0.3);
 }
 
-/* ── Torrent moderation action buttons (singular scope) ──── */
-.data-table__action .form__button--filled:has(.fa-pencil) {
+/* Subtext1 — edit / neutral */
+.data-table__action .form__button--filled:has(.fa-pencil),
+.sidebar2 .form__button--filled:has(.fa-edit) {
   background: #313244 !important;     /* Surface0 */
   color: #bac2de !important;          /* Subtext1 */
   border: 1px solid rgba(186, 194, 222, 0.3);
 }
 
-.data-table__action .form__button--filled:has(.fa-trash-alt) {
-  background: #313244 !important;     /* Surface0 */
-  color: #f38ba8 !important;          /* Red */
-  border: 1px solid rgba(243, 139, 168, 0.3);
+/* Search delete button: layout-only extras */
+.torrent-results__delete-btn {
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* ── Seeding glow: toned down on torrent page meta bar ───────── */
+.torrent-meta-bar__stat.torrent-activity-indicator--seeding {
+  text-shadow:
+    0 0 4px var(--torrent-row-seeders-fg),
+    0 0 10px rgba(166, 227, 161, 0.3);
 }
 
 /* ── Wiki content subtle background lift ─────────────────── */
@@ -764,18 +756,7 @@ a.text-bright:hover {
   padding: 20px;
 }
 
-/* ── Wiki sidebar buttons ────────────────────────────────── */
-.sidebar2 .form__button--filled:has(.fa-edit) {
-  background: #313244 !important;     /* Surface0 */
-  color: #bac2de !important;          /* Subtext1 */
-  border: 1px solid rgba(186, 194, 222, 0.3);
-}
-
-.sidebar2 .form__button--filled:has(.fa-trash) {
-  background: #313244 !important;     /* Surface0 */
-  color: #f38ba8 !important;          /* Red */
-  border: 1px solid rgba(243, 139, 168, 0.3);
-}
+/* ── Wiki sidebar delete button: covered by Red group above ─ */
 
 /* ── Shared action-button hover: Surface1 bg + Text fg ──── */
 .torrent-results__delete-btn:hover,
@@ -793,7 +774,7 @@ a.text-bright:hover {
   background: #181825 !important;     /* Mantle */
   border: 1px solid #45475a !important;
   border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(17, 17, 27, 0.6);
+  box-shadow: 0 8px 24px rgba(var(--shadow-color), 0.6);
   color: #cdd6f4 !important;
 }
 
