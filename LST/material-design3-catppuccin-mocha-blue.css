@@ -420,7 +420,7 @@
     /* ── Torrent Rows ── */
     --torrent-row-fg: #bac2de;
     --torrent-row-visited-fg: #cba6f7;
-    --torrent-row-sticky-bg: #313244;
+    --torrent-row-sticky-bg: #181825;          /* Mantle — subtle lift over Crust body */
     --torrent-row-format-fg: #bac2de;
     --torrent-row-format-bg: transparent;
     --torrent-row-buttons-fg: #11111b;
@@ -433,7 +433,7 @@
     --torrent-row-featured-fg: #f5c2e7;
     --torrent-row-freeleech-fg: #fab387;
     --torrent-row-double-upload-fg: #a6e3a1;
-    --torrent-row-sticky-fg: #11111b;
+    --torrent-row-sticky-fg: #bac2de;          /* Subtext1 — readable on Mantle */
     --torrent-row-highspeed-fg: #f38ba8;
     --torrent-row-bumped-fg: #f9e2af;
 
