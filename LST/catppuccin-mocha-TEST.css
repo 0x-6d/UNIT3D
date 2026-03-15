@@ -422,14 +422,12 @@
 a {
   color: #89b4fa; /* Blue */
 }
-a:visited {
-  color: #89b4fa; /* Blue — no global visited color change */
-}
 
 /* Torrent title links turn Mauve when visited */
 .torrent-search-row__name a:visited {
   color: #cba6f7; /* Mauve */
 }
+
 a:hover {
   color: #b4befe; /* Lavender */
 }
