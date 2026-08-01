@@ -978,3 +978,20 @@ a.text-bright:hover {
 .post__avatar {
   border-color: #89b4fa;          /* Blue */
 }
+
+/* Hero icon box: swap the green glow for a soft blue one */
+.forum-hero__icon {
+  box-shadow: 0 0 12px rgba(137, 180, 250, 0.25);  /* Blue glow */
+}
+
+/* Avatar frame stays blue on hover instead of turning green */
+.post__figure:hover,
+.post__avatar:hover,
+.post__figure:hover .post__avatar {
+  border-color: #89b4fa;          /* Blue */
+}
+
+/* Post container: hover accent line stays blue */
+.post:hover {
+  border-color: #89b4fa;          /* Blue */
+}
