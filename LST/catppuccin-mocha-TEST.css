@@ -913,3 +913,35 @@ a.text-bright:hover {
   background: #45475a;            /* Surface1 */
   color: #cdd6f4;                 /* Text */
 }
+
+/* ── Stats page (Catppuccin Mocha) ────────────────────────── */
+/*   These BEM blocks weren't remapped, so they inherited the   */
+/*   default theme's gold accent. Realign to Mocha Blue.        */
+
+/* Panel heading icons: gold -> Blue */
+.stats__panels .panel__heading > i {
+  color: #89b4fa;                 /* Blue */
+}
+
+/* Copy-stats action in heading: keep it quiet (Subtext1) */
+.stats__panels .panel__heading-action {
+  color: #bac2de;                 /* Subtext1 */
+}
+.stats__panels .panel__heading-action:hover {
+  color: #cdd6f4;                 /* Text */
+}
+
+/* Stat row icons (folder, tv, film, users, coins...): gold -> Blue */
+.sidebar-stat__icon {
+  color: #89b4fa;                 /* Blue */
+}
+
+/* Section labels (CATEGORY / RESOLUTION / REAL / ACTIVE...) */
+.sidebar-stat__label {
+  color: #a6adc8;                 /* Subtext0 */
+}
+
+/* Numeric values stay high-contrast */
+.sidebar-stat__value {
+  color: #cdd6f4;                 /* Text */
+}
