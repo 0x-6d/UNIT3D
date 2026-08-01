@@ -972,16 +972,17 @@ a.text-bright:hover {
   color: #89b4fa;                 /* Blue */
 }
 
-/* Green border rings: hero icon box + avatar frame */
-.forum-hero__icon,
+/* Avatar frame border ring */
 .post__figure,
 .post__avatar {
   border-color: #89b4fa;          /* Blue */
 }
 
-/* Hero icon box: swap the green glow for a soft blue one */
+/* Hero icon box: border + glow. Base theme sets these with !important,
+   so we match it to override the green. */
 .forum-hero__icon {
-  box-shadow: 0 0 12px rgba(137, 180, 250, 0.25);  /* Blue glow */
+  border-color: #89b4fa !important;                          /* Blue */
+  box-shadow: 0 0 12px rgba(137, 180, 250, 0.25) !important; /* Blue glow */
 }
 
 /* Avatar frame: subtle blue highlight on hover (not full-strength) */
