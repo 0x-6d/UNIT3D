@@ -946,62 +946,13 @@ a.text-bright:hover {
   color: #cdd6f4;                 /* Text */
 }
 
-/* ── Forum topic page (Catppuccin Mocha) ──────────────────── */
-/*   These forum BEM blocks weren't remapped, so they          */
-/*   inherited the Galactic theme's green accent. Realign to   */
-/*   Mocha Blue, matching the /stats page approach above.      */
-
-/* Hero icon + reply/view counts */
-.forum-hero__icon,
-.forum-hero__stat-value {
-  color: #89b4fa;                 /* Blue */
-}
-
-/* Section header icons ("Posts" comments icon, "Post a Reply" arrow) */
-.forum-posts__title > i,
-.forum-reply__title > i {
-  color: #89b4fa;                 /* Blue */
-}
-
-/* Author card: join date, topic/post counts */
-.post__author-join dd,
-.post__author-join-datetime,
-.post__author-topics dd,
-.post__author-posts dd {
-  color: #89b4fa;                 /* Blue */
-}
-
-/* Author rank/title: base sets this green with !important */
-.post__author-title {
-  color: #89b4fa !important;      /* Blue */
-}
-
-/* Avatar frame border ring */
-.post__figure,
-.post__avatar {
-  border-color: #89b4fa;          /* Blue */
-}
-
-/* Hero icon box: border + glow. Base theme sets these with !important,
-   so we match it to override the green. */
-.forum-hero__icon {
+/* ── Forum hero icon: specificity hammer (Catppuccin Mocha) ── */
+/*   Galactic paints this icon's border + glow green via a more   */
+/*   specific selector + !important. We can't see that selector,  */
+/*   so we out-weigh it: repeating the class 4x = specificity     */
+/*   (0,4,0), which beats a 3-class ancestor chain. With          */
+/*   !important on top, this wins on both border and glow.        */
+.forum-hero__icon.forum-hero__icon.forum-hero__icon.forum-hero__icon {
   border-color: #89b4fa !important;                          /* Blue */
   box-shadow: 0 0 12px rgba(137, 180, 250, 0.25) !important; /* Blue glow */
-}
-
-/* Hero section: base gives the whole banner a green top glow. */
-.forum-hero {
-  box-shadow: 0 2px 12px rgba(137, 180, 250, 0.12) !important;  /* soft blue */
-}
-
-/* Avatar frame: subtle blue highlight on hover (not full-strength) */
-.post__figure:hover,
-.post__avatar:hover,
-.post__figure:hover .post__avatar {
-  border-color: rgba(137, 180, 250, 0.4);   /* Blue, faded */
-}
-
-/* Post container: subtle blue hover accent */
-.post:hover {
-  border-color: rgba(137, 180, 250, 0.35);  /* Blue, faded */
 }
