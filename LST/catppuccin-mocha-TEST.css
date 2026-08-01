@@ -945,3 +945,23 @@ a.text-bright:hover {
 .sidebar-stat__value {
   color: #cdd6f4;                 /* Text */
 }
+
+/* ── Forum topic page (Catppuccin Mocha) ──────────────────── */
+/*   These forum BEM blocks weren't remapped, so they          */
+/*   inherited the Galactic theme's green accent. Realign to   */
+/*   Mocha Blue, matching the /stats page approach above.      */
+
+/* Hero icon + reply/view counts */
+.forum-hero__icon,
+.forum-hero__stat-value {
+  color: #89b4fa;                 /* Blue */
+}
+
+/* Author card: title, join date, topic/post counts */
+.post__author-title,
+.post__author-join dd,
+.post__author-join-datetime,
+.post__author-topics dd,
+.post__author-posts dd {
+  color: #89b4fa;                 /* Blue */
+}
