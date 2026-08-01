@@ -963,13 +963,17 @@ a.text-bright:hover {
   color: #89b4fa;                 /* Blue */
 }
 
-/* Author card: title, join date, topic/post counts */
-.post__author-title,
+/* Author card: join date, topic/post counts */
 .post__author-join dd,
 .post__author-join-datetime,
 .post__author-topics dd,
 .post__author-posts dd {
   color: #89b4fa;                 /* Blue */
+}
+
+/* Author rank/title: base sets this green with !important */
+.post__author-title {
+  color: #89b4fa !important;      /* Blue */
 }
 
 /* Avatar frame border ring */
@@ -983,6 +987,11 @@ a.text-bright:hover {
 .forum-hero__icon {
   border-color: #89b4fa !important;                          /* Blue */
   box-shadow: 0 0 12px rgba(137, 180, 250, 0.25) !important; /* Blue glow */
+}
+
+/* Hero section: base gives the whole banner a green top glow. */
+.forum-hero {
+  box-shadow: 0 2px 12px rgba(137, 180, 250, 0.12) !important;  /* soft blue */
 }
 
 /* Avatar frame: subtle blue highlight on hover (not full-strength) */
