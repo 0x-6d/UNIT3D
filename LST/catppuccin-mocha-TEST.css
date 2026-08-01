@@ -957,6 +957,12 @@ a.text-bright:hover {
   color: #89b4fa;                 /* Blue */
 }
 
+/* Section header icons ("Posts" comments icon, "Post a Reply" arrow) */
+.forum-posts__title > i,
+.forum-reply__title > i {
+  color: #89b4fa;                 /* Blue */
+}
+
 /* Author card: title, join date, topic/post counts */
 .post__author-title,
 .post__author-join dd,
@@ -964,4 +970,11 @@ a.text-bright:hover {
 .post__author-topics dd,
 .post__author-posts dd {
   color: #89b4fa;                 /* Blue */
+}
+
+/* Green border rings: hero icon box + avatar frame */
+.forum-hero__icon,
+.post__figure,
+.post__avatar {
+  border-color: #89b4fa;          /* Blue */
 }
