@@ -1,21 +1,19 @@
-/*
- * Catppuccin Mocha Theme Override
- * https://github.com/catppuccin/catppuccin
- *
- * Load this stylesheet AFTER the default theme CSS.
- * It overrides CSS custom properties with the Catppuccin Mocha palette.
- *
- * Palette reference:
- *   Base:      #1e1e2e    Mantle:    #181825    Crust:     #11111b
- *   Surface0:  #313244    Surface1:  #45475a    Surface2:  #585b70
- *   Overlay0:  #6c7086    Overlay1:  #7f849c    Overlay2:  #9399b2
- *   Subtext0:  #a6adc8    Subtext1:  #bac2de    Text:      #cdd6f4
- *   Rosewater: #f5e0dc    Flamingo:  #f2cdcd    Pink:      #f5c2e7
- *   Mauve:     #cba6f7    Red:       #f38ba8    Maroon:    #eba0ac
- *   Peach:     #fab387    Yellow:    #f9e2af    Green:     #a6e3a1
- *   Teal:      #94e2d5    Sky:       #89dceb    Sapphire:  #74c7ec
- *   Blue:      #89b4fa    Lavender:  #b4befe
- */
+/* ==========================================================
+   LST - Catppuccin Mocha (Blue) — UNIT3D / Galactic Override
+   Soothing pastel theme. Blue accent. Dark surfaces.
+   Author : x64
+   Ver    : 1.02
+   Flavor : Mocha   —   Accent : Blue
+   Stacks on: Galactic  (load AFTER the base theme CSS)
+   Palette (Catppuccin Mocha)
+   ────────────────────────────────────────────
+   Blue     #89b4fa   primary accent
+   Lavender #b4befe   accent hover
+   Base     #1e1e2e   page background
+   Mantle   #181825   deeper surface
+   Surface0 #313244   raised surfaces
+   Text     #cdd6f4   body text
+========================================================== */
 
 :root {
   /* ── Core text ─────────────────────────────────────────── */
