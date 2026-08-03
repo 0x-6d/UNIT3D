@@ -949,37 +949,36 @@ a.text-bright:hover {
 /*   tile + green glow + green stat numbers. Realign to Blue    */
 /*   and kill the glow, same as the stats-page patch above.     */
 
-/* Icon tile: green gradient + glow -> flat Surface0, Blue icon */
 .forum-hero__icon {
   background: #313244 !important;   /* Surface0 */
   border: 1px solid #45475a;        /* Surface1 */
   box-shadow: none !important;
   color: #89b4fa !important;        /* Blue */
 }
-
-/* Stat numbers: green + glow -> Blue, no text-shadow */
 .forum-hero__stat-value {
   color: #89b4fa !important;        /* Blue */
   text-shadow: none !important;
 }
-
 .forum-hero__stat-label {
   color: #a6adc8;                   /* Subtext0 */
 }
-
-/* Active toolbar toggle (Settings) also uses the green accent */
 .forum-hero__action-btn--active {
   color: #89b4fa !important;        /* Blue */
   box-shadow: none !important;
 }
 
-/* ── Forum index: categories + item rows (Catppuccin Mocha) ── */
-/*   Same green-accent leak as the hero: the layer-group        */
-/*   category icons and the per-forum chat tiles come through    */
-/*   green with a glow. Realign to Blue on flat Surface0, and    */
-/*   preserve the read/unread distinction (read = muted).        */
+/* "Create new topic" primary action: green fill -> Blue fill */
+.forum-hero__action-btn--primary {
+  background: #89b4fa !important;   /* Blue */
+  color: #1e1e2e !important;        /* Base (dark on blue) */
+  border: none !important;
+  box-shadow: none !important;
+}
+.forum-hero__action-btn--primary:hover {
+  background: #b4befe !important;   /* Lavender */
+}
 
-/* Category header: layer-group icon green -> Blue */
+/* ── Forum index: categories + item rows (Catppuccin Mocha) ── */
 .forum-category__title > i {
   color: #89b4fa;                   /* Blue */
 }
@@ -989,23 +988,17 @@ a.text-bright:hover {
 .forum-category__count {
   color: #7f849c;                   /* Overlay1 */
 }
-
-/* Forum row icon tile (unread): green gradient+glow -> flat */
 .forum-item__icon {
   background: #313244 !important;   /* Surface0 */
   border: 1px solid #45475a;        /* Surface1 */
   box-shadow: none !important;
   color: #89b4fa !important;        /* Blue */
 }
-
-/* Read rows: keep the icon muted so read/unread stays legible */
 .forum-item--read .forum-item__icon {
   background: #181825 !important;   /* Mantle */
   border-color: #313244 !important; /* Surface0 */
   color: #6c7086 !important;        /* Overlay0 */
 }
-
-/* Row text */
 .forum-item__description {
   color: #a6adc8;                   /* Subtext0 */
 }
@@ -1020,4 +1013,111 @@ a.text-bright:hover {
 }
 .forum-item__latest-time a:hover {
   color: #cdd6f4;                   /* Text */
+}
+
+/* ── Forum topic list: header + rows (Catppuccin Mocha) ────── */
+/*   Same green-accent leak pattern as the index page.          */
+
+/* List header: fa-comments icon green -> Blue */
+.topic-list__title > i {
+  color: #89b4fa;                   /* Blue */
+}
+.topic-list__count {
+  color: #7f849c;                   /* Overlay1 */
+}
+
+/* Unread status indicator stripe: accent -> Blue; read = muted. */
+/*   Extra selector weight (article + modifier) to beat the      */
+/*   base rule that was keeping this green.                      */
+article.topic-item.topic-item--unread .topic-item__indicator {
+  background: #89b4fa !important;   /* Blue */
+}
+article.topic-item.topic-item--read .topic-item__indicator {
+  background: #313244 !important;   /* Surface0 */
+}
+
+/* Row icon tiles: confirmed filled tiles. Unread was still      */
+/*   green (gradient behind the glyph); flatten to Surface0 +    */
+/*   Blue glyph, read stays muted. Same treatment as the index.  */
+article.topic-item.topic-item--unread .topic-item__icon {
+  background: #313244 !important;   /* Surface0 */
+  border: 1px solid #45475a !important; /* Surface1 */
+  box-shadow: none !important;
+  color: #89b4fa !important;        /* Blue */
+}
+article.topic-item.topic-item--read .topic-item__icon {
+  background: #181825 !important;   /* Mantle */
+  border: 1px solid #313244 !important; /* Surface0 */
+  box-shadow: none !important;
+  color: #6c7086 !important;        /* Overlay0 */
+}
+
+/* Row meta / stats */
+.topic-item__forum,
+.topic-item__author {
+  color: #a6adc8;                   /* Subtext0 */
+}
+.topic-item__stat-value {
+  color: #cdd6f4;                   /* Text */
+}
+.topic-item__stat-label {
+  color: #7f849c;                   /* Overlay1 */
+}
+.topic-item__latest-time a {
+  color: #7f849c;                   /* Overlay1 */
+}
+.topic-item__latest-time a:hover {
+  color: #cdd6f4;                   /* Text */
+}
+
+/* Status label chips: remap to Mocha, semantics preserved.     */
+/*   Dark chip + coloured text/border (matches torrent-badges). */
+.topic-item__tag {
+  background: #181825 !important;   /* Mantle */
+  border: 1px solid #313244 !important;
+}
+.topic-item__tag--approved {
+  color: #74c7ec !important;        /* Sapphire */
+  border-color: rgba(116, 199, 236, 0.3) !important;
+}
+.topic-item__tag--implemented,
+.topic-item__tag--solved {
+  color: #a6e3a1 !important;        /* Green */
+  border-color: rgba(166, 227, 161, 0.3) !important;
+}
+.topic-item__tag--suggestion {
+  color: #cba6f7 !important;        /* Mauve */
+  border-color: rgba(203, 166, 247, 0.3) !important;
+}
+.topic-item__tag--bug {
+  color: #fab387 !important;        /* Peach */
+  border-color: rgba(250, 179, 135, 0.3) !important;
+}
+.topic-item__tag--denied {
+  color: #f38ba8 !important;        /* Red */
+  border-color: rgba(243, 139, 168, 0.3) !important;
+}
+.topic-item__tag--invalid {
+  color: #7f849c !important;        /* Overlay1 */
+  border-color: rgba(127, 132, 156, 0.3) !important;
+}
+
+/* Pagination: align to the paginate palette tokens */
+.pagination__current {
+  background: #313244;              /* Surface0 */
+  color: #cdd6f4;                   /* Text */
+}
+.pagination__link {
+  color: #a6adc8;                   /* Subtext0 */
+}
+.pagination__link:hover {
+  background: #313244;              /* Surface0 */
+  color: #cdd6f4;                   /* Text */
+}
+.pagination__next a,
+.pagination__previous a {
+  color: #89b4fa;                   /* Blue */
+}
+.pagination__previous--disabled {
+  color: #585b70;                   /* Surface2 */
 }
