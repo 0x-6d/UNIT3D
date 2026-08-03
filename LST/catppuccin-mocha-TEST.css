@@ -956,3 +956,31 @@ a.text-bright:hover {
 .sidebar-stat__value {
   color: #cdd6f4;                 /* Text */
 }
+/* ── Forum hero (Catppuccin Mocha) ────────────────────────── */
+/*   Base UNIT3D keys this off the green accent: gradient icon  */
+/*   tile + green glow + green stat numbers. Realign to Blue    */
+/*   and kill the glow, same as the stats-page patch above.     */
+
+/* Icon tile: green gradient + glow -> flat Surface0, Blue icon */
+.forum-hero__icon {
+  background: #313244 !important;   /* Surface0 */
+  border: 1px solid #45475a;        /* Surface1 */
+  box-shadow: none !important;
+  color: #89b4fa !important;        /* Blue */
+}
+
+/* Stat numbers: green + glow -> Blue, no text-shadow */
+.forum-hero__stat-value {
+  color: #89b4fa !important;        /* Blue */
+  text-shadow: none !important;
+}
+
+.forum-hero__stat-label {
+  color: #a6adc8;                   /* Subtext0 */
+}
+
+/* Active toolbar toggle (Settings) also uses the green accent */
+.forum-hero__action-btn--active {
+  color: #89b4fa !important;        /* Blue */
+  box-shadow: none !important;
+}
