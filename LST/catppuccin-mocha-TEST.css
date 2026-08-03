@@ -972,3 +972,52 @@ a.text-bright:hover {
   color: #89b4fa !important;        /* Blue */
   box-shadow: none !important;
 }
+
+/* ── Forum index: categories + item rows (Catppuccin Mocha) ── */
+/*   Same green-accent leak as the hero: the layer-group        */
+/*   category icons and the per-forum chat tiles come through    */
+/*   green with a glow. Realign to Blue on flat Surface0, and    */
+/*   preserve the read/unread distinction (read = muted).        */
+
+/* Category header: layer-group icon green -> Blue */
+.forum-category__title > i {
+  color: #89b4fa;                   /* Blue */
+}
+.forum-category__title a {
+  color: #cdd6f4;                   /* Text */
+}
+.forum-category__count {
+  color: #7f849c;                   /* Overlay1 */
+}
+
+/* Forum row icon tile (unread): green gradient+glow -> flat */
+.forum-item__icon {
+  background: #313244 !important;   /* Surface0 */
+  border: 1px solid #45475a;        /* Surface1 */
+  box-shadow: none !important;
+  color: #89b4fa !important;        /* Blue */
+}
+
+/* Read rows: keep the icon muted so read/unread stays legible */
+.forum-item--read .forum-item__icon {
+  background: #181825 !important;   /* Mantle */
+  border-color: #313244 !important; /* Surface0 */
+  color: #6c7086 !important;        /* Overlay0 */
+}
+
+/* Row text */
+.forum-item__description {
+  color: #a6adc8;                   /* Subtext0 */
+}
+.forum-item__stat-value {
+  color: #cdd6f4;                   /* Text */
+}
+.forum-item__stat-label {
+  color: #7f849c;                   /* Overlay1 */
+}
+.forum-item__latest-time a {
+  color: #7f849c;                   /* Overlay1 */
+}
+.forum-item__latest-time a:hover {
+  color: #cdd6f4;                   /* Text */
+}
