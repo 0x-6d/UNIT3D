@@ -1121,3 +1121,22 @@ article.topic-item.topic-item--read .topic-item__icon {
 .pagination__previous--disabled {
   color: #585b70;                   /* Surface2 */
 }
+/* ── Footer: replace favicon + "LST" wordmark with logo image ───── */
+.footer__section-title:has(.top-nav__site-logo) {
+  font-size: 0;                 /* kills stray whitespace text nodes */
+  line-height: 0;
+}
+
+.footer__section-title:has(.top-nav__site-logo) img,
+.footer__section-title .top-nav__site-logo {
+  display: none !important;     /* inline height:30px stays, but hidden */
+}
+
+.footer__section-title:has(.top-nav__site-logo)::before {
+  content: "";
+  display: inline-block;
+  height: 34px;
+  aspect-ratio: 2144 / 1120;    /* native size of your PNG */
+  background: url("https://lostimg.cc/zS68LyBa.png") center / contain no-repeat;
+  vertical-align: middle;
+}
