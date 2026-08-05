@@ -966,7 +966,7 @@ a.text-bright:hover {
   content: "";
   display: block;
   width: 100%;
-  max-width: 360px;               /* bump to 440px for a larger logo */
+  max-width: 260px;               /* bump to 440px for a larger logo */
   aspect-ratio: 2144 / 1120;      /* native size of the source PNG */
   background: url("https://lostimg.cc/OVxRntGI.png") center / contain no-repeat;
   /* NOTE: no image-rendering property — the art is single-pixel
