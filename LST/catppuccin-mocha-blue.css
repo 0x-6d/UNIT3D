@@ -2,7 +2,9 @@
    LST - Catppuccin Mocha (Blue) — UNIT3D / Galactic Override
    Soothing pastel theme. Blue accent. Dark surfaces.
    Author : x64
-   Ver    : 1.02
+   Ver    : 1.03
+   Changes: 1.03 — Footer site logo: replace favicon + "LST" text
+                   wordmark with an image via ::before (scoped :has())
    Flavor : Mocha   —   Accent : Blue
    Stacks on: Galactic  (load AFTER the base theme CSS)
    Palette (Catppuccin Mocha)
@@ -942,4 +944,31 @@ a.text-bright:hover {
 /* Numeric values stay high-contrast */
 .sidebar-stat__value {
   color: #cdd6f4;                 /* Text */
+}
+
+/* ── Footer: site logo image ──────────────────────────────── */
+/*   Replaces the favicon + "LST" wordmark with a single image. */
+/*   Scoped with :has() so other footer column headings         */
+/*   (Account, Community, Gambling...) are unaffected.          */
+
+.footer__section-title:has(.top-nav__site-logo) {
+  font-size: 0;                   /* collapse whitespace text nodes */
+  line-height: 0;
+  margin-bottom: 16px;
+}
+
+.footer__section-title:has(.top-nav__site-logo) img,
+.footer__section-title .top-nav__site-logo {
+  display: none !important;       /* hide favicon + text wordmark */
+}
+
+.footer__section-title:has(.top-nav__site-logo)::before {
+  content: "";
+  display: block;
+  width: 100%;
+  max-width: 360px;               /* bump to 440px for a larger logo */
+  aspect-ratio: 2144 / 1120;      /* native size of the source PNG */
+  background: url("https://lostimg.cc/OVxRntGI.png") center / contain no-repeat;
+  /* NOTE: no image-rendering property — the art is single-pixel
+     dithered, so default smoothing reads better than pixelated. */
 }
