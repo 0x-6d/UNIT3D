@@ -2,8 +2,11 @@
    LST - Catppuccin Mocha (Blue) — UNIT3D / Galactic Override
    Soothing pastel theme. Blue accent. Dark surfaces.
    Author : x64
-   Ver    : 1.03
-   Changes: 1.03 — Footer site logo: replace favicon + "LST" text
+   Ver    : 1.04
+   Changes: 1.04 — Top-nav dropdowns scroll instead of running off
+                   screen on short / scaled (zoomed) viewports.
+                   Knob: --top-nav-dropdown-menu-max-height
+            1.03 — Footer site logo: replace favicon + "LST" text
                    wordmark with an image via ::before (scoped :has())
    Flavor : Mocha   —   Accent : Blue
    Stacks on: Galactic  (load AFTER the base theme CSS)
@@ -106,6 +109,10 @@
   --top-nav-dropdown-menu-item-hover-bg: #313244;
   --top-nav-dropdown-menu-item-icon-fg: #cdd6f4;
   --top-nav-dropdown-menu-item-icon-bg: #45475a;
+  /* Custom (not an upstream token): height at which a dropdown starts
+     scrolling. The 90px reserves the stats bar + nav above the menu,
+     plus a small gap at the bottom. Only knob you need to touch. */
+  --top-nav-dropdown-menu-max-height: calc(100dvh - 90px);
   --top-nav-ratio-bar-fg: #cdd6f4;
   --top-nav-icon-bar-icon-bg: #313244;
   --top-nav-icon-bar-icon-fg: #bac2de;
@@ -512,6 +519,40 @@ a.text-bright:hover {
 .top-nav__dropdown > ul > li > form > button:hover {
   color: var(--top-nav-dropdown-menu-item-hover-fg);
   background: var(--top-nav-dropdown-menu-item-hover-bg);
+}
+
+/* ── Top-nav dropdown: scroll instead of overflowing ───────── */
+/*   Base theme puts no height cap on the menu, so on a short or  */
+/*   scaled/zoomed viewport the bottom items run off screen with  */
+/*   no way to reach them. Cap the height and let it scroll.      */
+.top-nav__dropdown > ul {
+  max-height: calc(100vh - 90px);                        /* fallback */
+  max-height: var(--top-nav-dropdown-menu-max-height);   /* dvh-aware */
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;   /* don't scroll the page past the ends */
+  scrollbar-width: thin;
+  scrollbar-color: #585b70 transparent;                  /* Surface2 */
+}
+
+/* WebKit/Blink scrollbar inside the dropdown */
+.top-nav__dropdown > ul::-webkit-scrollbar {
+  width: 8px;
+}
+.top-nav__dropdown > ul::-webkit-scrollbar-track {
+  background: transparent;
+}
+.top-nav__dropdown > ul::-webkit-scrollbar-thumb {
+  background: #585b70;            /* Surface2 */
+  border-radius: 4px;
+}
+.top-nav__dropdown > ul::-webkit-scrollbar-thumb:hover {
+  background: #6c7086;            /* Overlay0 */
+}
+
+/* An ancestor clipping the menu would defeat the scroll above */
+.top-nav__dropdown {
+  overflow: visible;
 }
 
 /* ── Footer icon ───────────────────────────────────────────── */
@@ -966,7 +1007,7 @@ a.text-bright:hover {
   content: "";
   display: block;
   width: 100%;
-  max-width: 360px;               /* bump to 440px for a larger logo */
+  max-width: 260px;               /* single knob for logo size */
   aspect-ratio: 2144 / 1120;      /* native size of the source PNG */
   background: url("https://lostimg.cc/OVxRntGI.png") center / contain no-repeat;
   /* NOTE: no image-rendering property — the art is single-pixel
