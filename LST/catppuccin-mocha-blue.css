@@ -1019,7 +1019,7 @@ a.text-bright:hover {
 /*   each SVG (as %23hex) since CSS vars can't reach inside it. */
 .hdr-mark {
   box-sizing: border-box;
-  height: 26px;                   /* knob: match neighbouring badges */
+  height: 28px;                   /* knob: match neighbouring badges */
   width: auto;
   padding: 4px 8px;
   background: #181825;            /* Mantle */
@@ -1048,12 +1048,4 @@ a.text-bright:hover {
 [class*="sticky"] .hdr-mark {
   background: #282839 !important; /* Same as --torrent-row-sticky-bg */
 }
-/* Badge rows: size the marks from the row, not a fixed height */
-.hdr-marks--badges {
-  display: contents;              /* marks join the badge row directly */
-}
-.hdr-marks--badges .hdr-mark {
-  align-self: stretch;            /* same height as the other badges */
-  height: auto;
-  flex: none;
-}
+
