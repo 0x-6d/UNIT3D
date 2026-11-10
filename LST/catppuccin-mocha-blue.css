@@ -1013,3 +1013,38 @@ a.text-bright:hover {
   /* NOTE: no image-rendering property — the art is single-pixel
      dithered, so default smoothing reads better than pixelated. */
 }
+/* ── HDR format marks (Catppuccin Mocha) ──────────────────── */
+/*   Swaps the stock DV / HDR10+ / HDR logos for text badges    */
+/*   styled like .torrent-badges__item. Text colour lives in    */
+/*   each SVG (as %23hex) since CSS vars can't reach inside it. */
+.hdr-mark {
+  box-sizing: border-box;
+  height: 26px;                   /* knob: match neighbouring badges */
+  width: auto;
+  padding: 4px 8px;
+  background: #181825;            /* Mantle */
+  border: 1px solid #313244;      /* Surface0 */
+  border-radius: 5px;
+  vertical-align: middle;
+}
+
+.hdr-mark--dv {
+  border-color: rgba(203, 166, 247, 0.3);   /* Mauve */
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><text x='14' y='15' text-anchor='middle' font-family='system-ui,-apple-system,Segoe UI,sans-serif' font-weight='700' font-size='15' fill='%23cba6f7'>DV</text></svg>");
+}
+
+.hdr-mark--hdr-plus {
+  border-color: rgba(116, 199, 236, 0.3);   /* Sapphire */
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 20'><text x='32' y='15' text-anchor='middle' font-family='system-ui,-apple-system,Segoe UI,sans-serif' font-weight='700' font-size='15' fill='%2374c7ec'>HDR10+</text></svg>");
+}
+
+.hdr-mark--hdr {
+  border-color: rgba(250, 179, 135, 0.3);   /* Peach */
+  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 20'><text x='20' y='15' text-anchor='middle' font-family='system-ui,-apple-system,Segoe UI,sans-serif' font-weight='700' font-size='15' fill='%23fab387'>HDR</text></svg>");
+}
+
+/* Sticky rows: blend with the row bg, same as the other badges */
+.torrent-search--list__sticky-row .hdr-mark,
+[class*="sticky"] .hdr-mark {
+  background: #282839 !important; /* Same as --torrent-row-sticky-bg */
+}
