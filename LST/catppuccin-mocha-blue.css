@@ -1013,20 +1013,26 @@ a.text-bright:hover {
   /* NOTE: no image-rendering property — the art is single-pixel
      dithered, so default smoothing reads better than pixelated. */
 }
-/* ── HDR format marks (Catppuccin Mocha) ──────────────────── */
-/*   Swaps the stock DV / HDR10+ / HDR logos for themed badges.  */
-/*   No size rules: the site's own sizing is kept, and the       */
-/*   badge box (fill + border) is drawn inside each SVG.         */
-/*   Colours are %23hex since CSS vars can't reach inside.       */
+/* ── HDR format marks: dark-toned stock logos (Mocha) ─────── */
+/*   Keeps the real DV / HDR10+ / HDR logos, flipped to dark    */
+/*   badges with light lettering. Site sizing is untouched.     */
+/*   Knobs per mark:                                            */
+/*     saturate()   — colour strength (1 = original, 0 = grey)  */
+/*     brightness() — overall dimming (1 = original)            */
+/*   Use INSTEAD of the themed SVG swap, not alongside it.      */
+
+.hdr-mark {
+  border-radius: 5px;             /* match neighbouring badges */
+}
 
 .hdr-mark--dv {
-  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 24'><rect x='0.5' y='0.5' width='55' height='23' rx='5' fill='%23181825' stroke='%23cba6f7' stroke-opacity='0.3'/><text x='28' y='16.7' text-anchor='middle' font-family='system-ui,-apple-system,Segoe UI,sans-serif' font-weight='700' font-size='13' fill='%23cba6f7'>DV</text></svg>");
+  filter: invert(1) hue-rotate(180deg) brightness(0.9);
 }
 
 .hdr-mark--hdr-plus {
-  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 76 24'><rect x='0.5' y='0.5' width='75' height='23' rx='5' fill='%23181825' stroke='%2374c7ec' stroke-opacity='0.3'/><text x='38' y='16.7' text-anchor='middle' font-family='system-ui,-apple-system,Segoe UI,sans-serif' font-weight='700' font-size='13' fill='%2374c7ec'>HDR10+</text></svg>");
+  filter: invert(1) hue-rotate(180deg) saturate(0.4) brightness(0.9);
 }
 
 .hdr-mark--hdr {
-  content: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 24'><rect x='0.5' y='0.5' width='55' height='23' rx='5' fill='%23181825' stroke='%23fab387' stroke-opacity='0.3'/><text x='28' y='16.7' text-anchor='middle' font-family='system-ui,-apple-system,Segoe UI,sans-serif' font-weight='700' font-size='13' fill='%23fab387'>HDR</text></svg>");
+  filter: invert(1) hue-rotate(180deg) saturate(0.6) brightness(0.9);
 }
