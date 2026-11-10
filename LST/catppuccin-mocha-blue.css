@@ -1048,3 +1048,12 @@ a.text-bright:hover {
 [class*="sticky"] .hdr-mark {
   background: #282839 !important; /* Same as --torrent-row-sticky-bg */
 }
+/* Badge rows: size the marks from the row, not a fixed height */
+.hdr-marks--badges {
+  display: contents;              /* marks join the badge row directly */
+}
+.hdr-marks--badges .hdr-mark {
+  align-self: stretch;            /* same height as the other badges */
+  height: auto;
+  flex: none;
+}
